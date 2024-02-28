@@ -3,6 +3,11 @@
  $v = 'latest';
  if (array_key_exists('v', $_GET))
   $v = preg_replace('/[^0-9\.]/', '', $_GET['v']);
+ $stats = array(
+  'unqualified' => -1,
+  'minimally-qualified' => 0,
+  'fully-qualified' => 1
+ );
  $safeSkip = $v;
  $data = file_get_contents('https://unicode.org/Public/emoji/'.$v.'/emoji-test.txt');
  $lns = explode("\n", $data);
@@ -69,16 +74,12 @@
   $version = substr($version, 1);
   $name = $details[2];
   $codeStd = strtolower(implode('-', $code));
-  if ($status === 'minimally-qualified' || $status === 'unqualified')
-   $db[$codeStd] = array('target' => $name, 'status' => $status);
-  if ($status !== 'fully-qualified')
+  if (!array_key_exists($status, $stats))
    continue;
-  $db[$codeStd] = array(
-   'name' => $name,
-   'ver' => $version,
-   'group' => $group,
-   'subgroup' => $subgroup
-  );
+  if ($stats[$status] < 1)
+   $db[$codeStd] = array('target' => $name, 'status' => $status);
+  else
+   $db[$codeStd] = array('name' => $name, 'ver' => $version, 'group' => $group, 'subgroup' => $subgroup);
  }
  foreach ($db as $k => $v)
  {
@@ -282,7 +283,6 @@
   unset($dbMin[$id]['ver']);
   unset($dbMin[$id]['group']);
   unset($dbMin[$id]['subgroup']);
-  unset($dbMin[$id]['status']);
   if (array_key_exists('aliases', $dbMin[$id]))
   {
    $dbMin[$id]['a'] = $dbMin[$id]['aliases'];
@@ -292,6 +292,12 @@
   {
    $dbMin[$id]['t'] = $dbMin[$id]['target'];
    unset($dbMin[$id]['target']);
+  }
+  if (array_key_exists('status', $dbMin[$id]))
+  {
+   if (array_key_exists($dbMin[$id]['status'], $stats))
+    $dbMin[$id]['s'] = $stats[$dbMin[$id]['status']];
+   unset($dbMin[$id]['status']);
   }
   if (count(array_keys($dbMin[$id])) === 0)
    $dbMin[$id] = 1;
