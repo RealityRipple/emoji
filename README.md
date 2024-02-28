@@ -21,4 +21,4 @@ Where:
 
  - `%FONT%` is `twemoji`, `openmoji`, `noto` or `blob`  
 
- - `%EMOJI_ID%` is the lower-case, hyphen-separated hexadecimal representation of the Emoji, as listed in the JSON table. `minimally-qualified` and `unqualified` type entries must use the target value of their `fully-qualified` counterpart  
+ - `%EMOJI_ID%` is the lower-case, hyphen-separated hexadecimal representation of the Emoji, as listed in the JSON table. `minimally-qualified` and `unqualified` status entries must use the target value of their `fully-qualified` counterpart  

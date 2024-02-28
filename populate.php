@@ -70,7 +70,7 @@
   $name = $details[2];
   $codeStd = strtolower(implode('-', $code));
   if ($status === 'minimally-qualified' || $status === 'unqualified')
-   $db[$codeStd] = array('target' => $name, 'type' => $status);
+   $db[$codeStd] = array('target' => $name, 'status' => $status);
   if ($status !== 'fully-qualified')
    continue;
   $db[$codeStd] = array(
@@ -282,7 +282,7 @@
   unset($dbMin[$id]['ver']);
   unset($dbMin[$id]['group']);
   unset($dbMin[$id]['subgroup']);
-  unset($dbMin[$id]['type']);
+  unset($dbMin[$id]['status']);
   if (array_key_exists('aliases', $dbMin[$id]))
   {
    $dbMin[$id]['a'] = $dbMin[$id]['aliases'];
