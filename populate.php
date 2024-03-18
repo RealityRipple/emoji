@@ -31,6 +31,26 @@
   $to = explode('_', $to);
   $blobRedir[$from] = $to;
  }
+ $tmpAR = explode("\n", file_get_contents('sources/apple-emoji-linux/emoji_aliases.txt'));
+ $appleRedir = array();
+ for ($i = 0; $i < count($tmpAR); $i++)
+ {
+  if (empty($tmpAR[$i]))
+   continue;
+  if (substr($tmpAR[$i], 0, 1) === '#')
+   continue;
+  if (!str_contains($tmpAR[$i], ';'))
+   continue;
+  $from = substr($tmpAR[$i], 0, strpos($tmpAR[$i], ';'));
+  $to = substr($tmpAR[$i], strpos($tmpAR[$i], ';') + 1);
+  if (str_contains($to, '#'))
+   $to = substr($to, 0, strpos($to, '#'));
+  $from = strtolower(trim($from));
+  $to = strtolower(trim($to));
+  $from = implode('-', explode('_', $from));
+  $to = explode('_', $to);
+  $appleRedir[$from] = $to;
+ }
  $db = array();
  $group = 'Ungrouped';
  $subgroup = 'none';
@@ -41,6 +61,7 @@
  @mkdir('blob');
  @mkdir('facebook');
  @mkdir('joypixels');
+ @mkdir('apple');
  copy('sources/twemoji/LICENSE', './LICENSE-TWEMOJI');
  copy('sources/twemoji/LICENSE-GRAPHICS', './LICENSE-TWEMOJI-GRAPHICS');
  copy('sources/openmoji/LICENSE.txt', './LICENSE-OPENMOJI');
@@ -125,6 +146,9 @@
   $blobE = $codeE;
   if (array_key_exists($codeStd, $blobRedir))
    $blobE = 'emoji_u'.strtolower(implode('_', $blobRedir[$codeStd]));
+  $appleE = $codeE;
+  if (array_key_exists($codeStd, $appleRedir))
+   $appleE = 'emoji_u'.strtolower(implode('_', $appleRedir[$codeStd]));
   $pct = floor(($iIDX/$ct) * 100);
   echo "[$pct%] Copying $name ($codeStd)...\n";
 
@@ -339,8 +363,46 @@
    continue;
   }
 
+  $aName = false;
+  $aList = array($appleE);
+  if (array_key_exists('aliases', $v))
+  {
+   foreach ($v['aliases'] as $alias)
+   {
+    if (array_key_exists($alias, $appleRedir))
+     $aList[] = 'emoji_u'.strtolower(implode('_', explode('-', $appleRedir[$alias])));
+    else
+     $aList[] = 'emoji_u'.strtolower(implode('_', explode('-', $alias)));
+   }
+  }
+  foreach ($aList as $test)
+  {
+   $path = "sources/apple-emoji-linux/png/160/$test.png";
+   if (file_exists($path))
+   {
+    $aName = $path;
+    break;
+   }
+  }
+  if (!$aName)
+  {
+   echo "$codeStd not found in Apple";
+   if ($v['ver'] !== $safeSkip)
+    die("\n");
+   echo " - Skipping Latest (v$safeSkip)\n";
+   $skipped[] = $codeStd;
+   unset($db[$k]);
+   if (array_key_exists('aliases', $v))
+   {
+    foreach ($v['aliases'] as $alias)
+     unset($db[$alias]);
+   }
+   continue;
+  }
+
   shrinkPNG($fName, "facebook/$codeStd.png", $rSz);
   shrinkPNG($jName, "joypixels/$codeStd.png", $rSz);
+  shrinkPNG($aName, "apple/$codeStd.png", $rSz);
   makePNGFromSVG($tName, "twemoji/$codeStd.png", $rSz);
   makePNGFromSVG($oName, "openmoji/$codeStd.png", $rSz);
   makePNGFromSVG($nName, "noto/$codeStd.png", $rSz);

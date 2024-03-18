@@ -21,3 +21,7 @@
 	path = sources/joypixels
 	url = https://github.com/joypixels/emoji-assets.git
 	branch = master
+[submodule "sources/apple-emoji-linux"]
+	path = sources/apple-emoji-linux
+	url = https://github.com/samuelngs/apple-emoji-linux.git
+	branch = ios-16.4
