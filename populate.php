@@ -40,11 +40,13 @@
  @mkdir('noto');
  @mkdir('blob');
  @mkdir('facebook');
+ @mkdir('joypixels');
  copy('sources/twemoji/LICENSE', './LICENSE-TWEMOJI');
  copy('sources/twemoji/LICENSE-GRAPHICS', './LICENSE-TWEMOJI-GRAPHICS');
  copy('sources/openmoji/LICENSE.txt', './LICENSE-OPENMOJI');
  copy('sources/noto-emoji/LICENSE', './LICENSE-NOTO+BLOB');
  copy('sources/fbmoji/LICENSE', './LICENSE-FACEBOOK');
+ copy('sources/joypixels/LICENSE.md', './LICENSE-JOYPIXELS');
  for ($i = 0; $i < count($lns); $i++)
  {
   if (empty($lns[$i]))
@@ -117,6 +119,7 @@
   $codeStd = strtolower(implode('-', $code));
   $codeCap = strtoupper(implode('-', $code));
   $codeNoZ = ltrim($codeStd, '0');
+  $codeJoy = str_replace('-200d', '', $codeStd);
   $codeE = 'emoji_u'.strtolower(implode('_', $code));
   $codeN = strtolower(preg_replace('/[^\p{Lu}\p{Ll}0-9\- ]/u', '', $name));
   $blobE = $codeE;
@@ -304,7 +307,40 @@
    continue;
   }
 
+  $jName = false;
+  $jList = array($codeJoy);
+  if (array_key_exists('aliases', $v))
+  {
+   foreach ($v['aliases'] as $alias)
+    $jList[] = str_replace('-200d', '', $alias);
+  }
+  foreach ($jList as $test)
+  {
+   $path = "sources/joypixels/png/128/$test.png";
+   if (file_exists($path))
+   {
+    $jName = $path;
+    break;
+   }
+  }
+  if (!$jName)
+  {
+   echo "$codeStd not found in JoyPixels";
+   if ($v['ver'] !== $safeSkip)
+    die("\n");
+   echo " - Skipping Latest (v$safeSkip)\n";
+   $skipped[] = $codeStd;
+   unset($db[$k]);
+   if (array_key_exists('aliases', $v))
+   {
+    foreach ($v['aliases'] as $alias)
+     unset($db[$alias]);
+   }
+   continue;
+  }
+
   shrinkPNG($fName, "facebook/$codeStd.png", $rSz);
+  shrinkPNG($jName, "joypixels/$codeStd.png", $rSz);
   makePNGFromSVG($tName, "twemoji/$codeStd.png", $rSz);
   makePNGFromSVG($oName, "openmoji/$codeStd.png", $rSz);
   makePNGFromSVG($nName, "noto/$codeStd.png", $rSz);

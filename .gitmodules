@@ -17,3 +17,7 @@
 	path = sources/fbmoji
 	url = https://github.com/RealityRipple/fbmoji.git
 	branch = master
+[submodule "sources/joypixels"]
+	path = sources/joypixels
+	url = https://github.com/joypixels/emoji-assets.git
+	branch = master
