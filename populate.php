@@ -39,10 +39,12 @@
  @mkdir('openmoji');
  @mkdir('noto');
  @mkdir('blob');
+ @mkdir('facebook');
  copy('sources/twemoji/LICENSE', './LICENSE-TWEMOJI');
  copy('sources/twemoji/LICENSE-GRAPHICS', './LICENSE-TWEMOJI-GRAPHICS');
  copy('sources/openmoji/LICENSE.txt', './LICENSE-OPENMOJI');
  copy('sources/noto-emoji/LICENSE', './LICENSE-NOTO+BLOB');
+ copy('sources/fbmoji/LICENSE', './LICENSE-FACEBOOK');
  for ($i = 0; $i < count($lns); $i++)
  {
   if (empty($lns[$i]))
@@ -269,6 +271,40 @@
    }
    continue;
   }
+
+  $fName = false;
+  $fList = array(ltrim(strtolower(implode('_', explode('-', $codeStd))), '0'));
+  if (array_key_exists('aliases', $v))
+  {
+   foreach ($v['aliases'] as $alias)
+    $fList[] = ltrim(strtolower(implode('_', explode('-', $alias))), '0');
+  }
+  foreach ($fList as $test)
+  {
+   $path = "sources/fbmoji/png/$test.png";
+   if (file_exists($path))
+   {
+    $fName = $path;
+    break;
+   }
+  }
+  if (!$fName)
+  {
+   echo "$codeStd not found in Facebook";
+   if ($v['ver'] !== $safeSkip)
+    die("\n");
+   echo " - Skipping Latest (v$safeSkip)\n";
+   $skipped[] = $codeStd;
+   unset($db[$k]);
+   if (array_key_exists('aliases', $v))
+   {
+    foreach ($v['aliases'] as $alias)
+     unset($db[$alias]);
+   }
+   continue;
+  }
+
+  shrinkPNG($fName, "facebook/$codeStd.png", $rSz);
   makePNGFromSVG($tName, "twemoji/$codeStd.png", $rSz);
   makePNGFromSVG($oName, "openmoji/$codeStd.png", $rSz);
   makePNGFromSVG($nName, "noto/$codeStd.png", $rSz);
@@ -319,5 +355,16 @@
    exec("bash -c 'exec nohup setsid $inkscape > /dev/null 2>&1 &'");
   else
    exec($inkscape);
+ }
+ function shrinkPNG($src, $png, $h = 112, $async = true)
+ {
+  $convert = 'convert';
+  $convert.= ' "'.$src.'"';
+  $convert.= ' -resize 112x112^';
+  $convert.= ' "png32:'.$png.'"';
+  if ($async)
+   exec("bash -c 'exec nohup setsid $convert > /dev/null 2>&1 &'");
+  else
+   exec($convert);
  }
 ?>

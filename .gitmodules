@@ -13,3 +13,7 @@
 	path = sources/twemoji
 	url = https://github.com/jdecked/twemoji.git
 	branch = main
+[submodule "sources/fbmoji"]
+	path = sources/fbmoji
+	url = https://github.com/RealityRipple/fbmoji.git
+	branch = master
