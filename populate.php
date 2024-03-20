@@ -62,12 +62,14 @@
  @mkdir('facebook');
  @mkdir('joypixels');
  @mkdir('apple');
+ @mkdir('tossface');
  copy('sources/twemoji/LICENSE', './LICENSE-TWEMOJI');
  copy('sources/twemoji/LICENSE-GRAPHICS', './LICENSE-TWEMOJI-GRAPHICS');
  copy('sources/openmoji/LICENSE.txt', './LICENSE-OPENMOJI');
  copy('sources/noto-emoji/LICENSE', './LICENSE-NOTO+BLOB');
  copy('sources/fbmoji/LICENSE', './LICENSE-FACEBOOK');
  copy('sources/joypixels/LICENSE.md', './LICENSE-JOYPIXELS');
+ copy('sources/tossface/LICENSE', './LICENSE-TOSSFACE');
  for ($i = 0; $i < count($lns); $i++)
  {
   if (empty($lns[$i]))
@@ -141,6 +143,7 @@
   $codeCap = strtoupper(implode('-', $code));
   $codeNoZ = ltrim($codeStd, '0');
   $codeJoy = str_replace('-200d', '', $codeStd);
+  $codeToss = str_replace('U', 'u', strtoupper('U'.implode('_U', $code)));
   $codeE = 'emoji_u'.strtolower(implode('_', $code));
   $codeN = strtolower(preg_replace('/[^\p{Lu}\p{Ll}0-9\- ]/u', '', $name));
   $blobE = $codeE;
@@ -400,13 +403,48 @@
    continue;
   }
 
+  $tfName = false;
+  $tfList = array($codeToss);
+  if (array_key_exists('aliases', $v))
+  {
+   foreach ($v['aliases'] as $alias)
+   {
+    $tfList[] = str_replace('U', 'u', strtoupper('U'.implode('_U', explode('-', $alias))));
+   }
+  }
+  foreach ($tfList as $test)
+  {
+   $path = "sources/tossface/dist/svg/$test.svg";
+   if (file_exists($path))
+   {
+    $tfName = $path;
+    break;
+   }
+  }
+  if (!$tfName)
+  {
+   echo "$codeStd not found in Toss Face";
+   if ($v['ver'] !== $safeSkip)
+    die("\n");
+   echo " - Skipping Latest (v$safeSkip)\n";
+   $skipped[] = $codeStd;
+   unset($db[$k]);
+   if (array_key_exists('aliases', $v))
+   {
+    foreach ($v['aliases'] as $alias)
+     unset($db[$alias]);
+   }
+   continue;
+  }
+
   shrinkPNG($fName, "facebook/$codeStd.png", $rSz);
   shrinkPNG($jName, "joypixels/$codeStd.png", $rSz);
   shrinkPNG($aName, "apple/$codeStd.png", $rSz);
   makePNGFromSVG($tName, "twemoji/$codeStd.png", $rSz);
   makePNGFromSVG($oName, "openmoji/$codeStd.png", $rSz);
   makePNGFromSVG($nName, "noto/$codeStd.png", $rSz);
-  makePNGFromSVG($bName, "blob/$codeStd.png", $rSz, false);
+  makePNGFromSVG($bName, "blob/$codeStd.png", $rSz);
+  makePNGFromSVG($tfName, "tossface/$codeStd.png", $rSz, false);
  }
  file_put_contents('list.json', json_encode($db, JSON_PRETTY_PRINT));
  $dbMin = array();

@@ -26,5 +26,9 @@
  "joypixels": {
   "title": "JoyPixels",
   "source": "https://github.com/joypixels/emoji-assets"
+ },
+ "tossface": {
+  "title": "Toss Face",
+  "source": "https://github.com/toss/tossface"
  }
 }

@@ -25,3 +25,7 @@
 	path = sources/apple-emoji-linux
 	url = https://github.com/samuelngs/apple-emoji-linux.git
 	branch = ios-16.4
+[submodule "sources/tossface"]
+	path = sources/tossface
+	url = https://github.com/toss/tossface
+	branch = main
