@@ -1,0 +1,30 @@
+{
+ "twemoji": {
+  "title": "Twemoji",
+  "source": "https://github.com/jdecked/twemoji"
+ },
+ "openmoji": {
+  "title": "OpenMoji",
+  "source": "https://github.com/hfg-gmuend/openmoji"
+ },
+ "noto": {
+  "title": "Noto Color Emoji",
+  "source": "https://github.com/googlefonts/noto-emoji"
+ },
+ "blob": {
+  "title": "Blobmoji",
+  "source": "https://github.com/C1710/blobmoji"
+ },
+ "facebook": {
+  "title": "Facebook Emoji",
+  "source": "https://github.com/RealityRipple/fbmoji"
+ },
+ "apple": {
+  "title": "Apple Color Emoji",
+  "source": "https://github.com/samuelngs/apple-emoji-linux"
+ },
+ "joypixels": {
+  "title": "JoyPixels",
+  "source": "https://github.com/joypixels/emoji-assets"
+ }
+}
