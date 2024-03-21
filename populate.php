@@ -1,68 +1,24 @@
 <?php
  header('content-type: text/plain');
- $v = 'latest';
- if (array_key_exists('v', $_GET))
-  $v = preg_replace('/[^0-9\.]/', '', $_GET['v']);
- $stats = array(
-  'unqualified' => -1,
-  'minimally-qualified' => 0,
-  'fully-qualified' => 1
- );
- $safeSkip = $v;
- $data = file_get_contents('https://unicode.org/Public/emoji/'.$v.'/emoji-test.txt');
- $lns = explode("\n", $data);
- $tmpBR = explode("\n", file_get_contents('sources/blobmoji/emoji_aliases.txt'));
- $blobRedir = array();
- for ($i = 0; $i < count($tmpBR); $i++)
- {
-  if (empty($tmpBR[$i]))
-   continue;
-  if (substr($tmpBR[$i], 0, 1) === '#')
-   continue;
-  if (!str_contains($tmpBR[$i], ';'))
-   continue;
-  $from = substr($tmpBR[$i], 0, strpos($tmpBR[$i], ';'));
-  $to = substr($tmpBR[$i], strpos($tmpBR[$i], ';') + 1);
-  if (str_contains($to, '#'))
-   $to = substr($to, 0, strpos($to, '#'));
-  $from = strtolower(trim($from));
-  $to = strtolower(trim($to));
-  $from = implode('-', explode('_', $from));
-  $to = explode('_', $to);
-  $blobRedir[$from] = $to;
- }
- $tmpAR = explode("\n", file_get_contents('sources/apple-emoji-linux/emoji_aliases.txt'));
- $appleRedir = array();
- for ($i = 0; $i < count($tmpAR); $i++)
- {
-  if (empty($tmpAR[$i]))
-   continue;
-  if (substr($tmpAR[$i], 0, 1) === '#')
-   continue;
-  if (!str_contains($tmpAR[$i], ';'))
-   continue;
-  $from = substr($tmpAR[$i], 0, strpos($tmpAR[$i], ';'));
-  $to = substr($tmpAR[$i], strpos($tmpAR[$i], ';') + 1);
-  if (str_contains($to, '#'))
-   $to = substr($to, 0, strpos($to, '#'));
-  $from = strtolower(trim($from));
-  $to = strtolower(trim($to));
-  $from = implode('-', explode('_', $from));
-  $to = explode('_', $to);
-  $appleRedir[$from] = $to;
- }
- $db = array();
- $group = 'Ungrouped';
- $subgroup = 'none';
+
  $rSz = 112;
- @mkdir('twemoji');
- @mkdir('openmoji');
- @mkdir('noto');
- @mkdir('blob');
- @mkdir('facebook');
- @mkdir('joypixels');
- @mkdir('apple');
- @mkdir('tossface');
+ $fonts = array(
+  'twemoji' => 'twemoji',
+  'openmoji' => 'openmoji',
+  'noto' => 'noto-emoji',
+  'blob' => 'blobmoji',
+  'facebook' => 'fbmoji',
+  'joypixels' => 'joypixels',
+  'apple' => 'apple-emoji-linux',
+  'tossface' => 'tossface');
+
+ $redirs = array();
+ foreach ($fonts as $font => $fontPath)
+ {
+  @mkdir($font);
+  if (file_exists('sources/'.$fontPath.'/emoji_aliases.txt'))
+   $redirs[$font] = fileReadAlias($fontPath);
+ }
  copy('sources/twemoji/LICENSE', './LICENSE-TWEMOJI');
  copy('sources/twemoji/LICENSE-GRAPHICS', './LICENSE-TWEMOJI-GRAPHICS');
  copy('sources/openmoji/LICENSE.txt', './LICENSE-OPENMOJI');
@@ -70,384 +26,93 @@
  copy('sources/fbmoji/LICENSE', './LICENSE-FACEBOOK');
  copy('sources/joypixels/LICENSE.md', './LICENSE-JOYPIXELS');
  copy('sources/tossface/LICENSE', './LICENSE-TOSSFACE');
- for ($i = 0; $i < count($lns); $i++)
- {
-  if (empty($lns[$i]))
-   continue;
-  if (substr($lns[$i], 0, 1) === '#')
-  {
-   if (strlen($lns[$i]) > 11 && substr($lns[$i], 0, 11) === '# Version: ')
-    $safeSkip = trim(substr($lns[$i], 11));
-   if (strlen($lns[$i]) > 9 && substr($lns[$i], 0, 9) === '# group: ')
-    $group = trim(substr($lns[$i], 9));
-   if (strlen($lns[$i]) > 12 && substr($lns[$i], 0, 12) === '# subgroup: ')
-    $subgroup = trim(substr($lns[$i], 12));
-   continue;
-  }
-  if (!str_contains($lns[$i], ';'))
-   continue;
-  if (!str_contains($lns[$i], '#'))
-   continue;
-  $code = explode(' ', trim(substr($lns[$i], 0, strpos($lns[$i], ';'))));
-  $status = substr($lns[$i], strpos($lns[$i], ';') + 1);
-  $status = trim(substr($status, 0, strpos($status, '#')));
-  $details = explode(' ', trim(substr($lns[$i], strpos($lns[$i], '#') + 1)), 3);
-  if (count($details) !== 3)
-   continue;
-  $value = $details[0];
-  $version = $details[1];
-  if (substr($version, 0, 1) !== 'E')
-   continue;
-  $version = substr($version, 1);
-  $name = $details[2];
-  $codeStd = strtolower(implode('-', $code));
-  if (!array_key_exists($status, $stats))
-   continue;
-  if ($stats[$status] < 1)
-   $db[$codeStd] = array('target' => $name, 'status' => $status);
-  else
-   $db[$codeStd] = array('name' => $name, 'ver' => $version, 'group' => $group, 'subgroup' => $subgroup);
- }
- foreach ($db as $k => $v)
- {
-  if (!array_key_exists('target', $v))
-   continue;
-  $found = false;
-  foreach ($db as $k2 => $v2)
-  {
-   if (!array_key_exists('name', $v2))
-    continue;
-   if ($v2['name'] !== $v['target'])
-    continue;
-   $db[$k]['target'] = $k2;
-   if (!array_key_exists('aliases', $v2))
-    $db[$k2]['aliases'] = array();
-   $db[$k2]['aliases'][] = strval($k);
-   $found = true;
-   break;
-  }
-  if (!$found)
-   unset($db[$k]);
- }
- $skipped = array();
+
+ $GLOBALS['stats'] = array(
+  'unqualified' => -1,
+  'minimally-qualified' => 0,
+  'fully-qualified' => 1
+ );
+
+ $ver = 'latest';
+ if (array_key_exists('v', $_GET))
+  $ver = preg_replace('/[^0-9\.]/', '', $_GET['v']);
+ $safeSkip = '';
+ $db = dbReadTXT($ver, $safeSkip);
+ dbGroupAliases($db);
+
+
  $ct = count(array_keys($db));
  $iIDX = 0;
+ $skipped = array();
  foreach ($db as $k => $v)
  {
   $iIDX++;
   if (!array_key_exists('name', $v))
    continue;
-  $code = explode('-', $k);
+  $pct = strval(floor(($iIDX/$ct) * 100));
+  while (strlen($pct) < 2)
+   $pct = '0'.$pct;
+  $code = strtolower($k);
   $name = $v['name'];
-  $codeStd = strtolower(implode('-', $code));
-  $codeCap = strtoupper(implode('-', $code));
-  $codeNoZ = ltrim($codeStd, '0');
-  $codeJoy = str_replace('-200d', '', $codeStd);
-  $codeToss = str_replace('U', 'u', strtoupper('U'.implode('_U', $code)));
-  $codeE = 'emoji_u'.strtolower(implode('_', $code));
-  $codeN = strtolower(preg_replace('/[^\p{Lu}\p{Ll}0-9\- ]/u', '', $name));
-  $blobE = $codeE;
-  if (array_key_exists($codeStd, $blobRedir))
-   $blobE = 'emoji_u'.strtolower(implode('_', $blobRedir[$codeStd]));
-  $appleE = $codeE;
-  if (array_key_exists($codeStd, $appleRedir))
-   $appleE = 'emoji_u'.strtolower(implode('_', $appleRedir[$codeStd]));
-  $pct = floor(($iIDX/$ct) * 100);
-  echo "[$pct%] Copying $name ($codeStd)...\n";
+  echo "[$pct%] Copying $name...";
 
-  $tName = false;
-  $tList = array($codeNoZ);
-  if (array_key_exists('aliases', $v))
+  $ftFiles = array();
+  foreach ($fonts as $font => $fontPath)
   {
-   foreach ($v['aliases'] as $alias)
-    $tList[] = ltrim(strtolower($alias), '0');
-  }
-  foreach ($tList as $test)
-  {
-   $path = "sources/twemoji/assets/svg/$test.svg";
-   if (file_exists($path))
+   $fRedir = false;
+   if (array_key_exists($font, $redirs))
+    $fRedir = $redirs[$font];
+
+   $fAlias = false;
+   if (array_key_exists('aliases', $v))
+    $fAlias = $v['aliases'];
+
+   $eName = emojiParse($code, $font, $fontPath, $name, $fAlias, $fRedir);
+
+   if (!!$eName)
    {
-    $tName = $path;
-    break;
+    $ftFiles[$font] = $eName;
+    continue;
    }
-  }
-  if (!$tName)
-  {
-   echo "$codeStd not found in Twemoji";
+
+   echo " Fail!\n      $code not found in $font";
    if ($v['ver'] !== $safeSkip)
     die("\n");
    echo " - Skipping Latest (v$safeSkip)\n";
-   $skipped[] = $codeStd;
+   $skipped[] = $code;
+
    unset($db[$k]);
-   if (array_key_exists('aliases', $v))
+   if (!!$fAlias)
    {
-    foreach ($v['aliases'] as $alias)
+    foreach ($fAlias as $alias)
      unset($db[$alias]);
    }
-   continue;
+
+   break;
   }
 
-  $oName = false;
-  $oList = array($codeCap);
-  if (array_key_exists('aliases', $v))
-  {
-   foreach ($v['aliases'] as $alias)
-    $oList[] = strtoupper($alias);
-  }
-  foreach ($oList as $test)
-  {
-   $path = "sources/openmoji/color/svg/$test.svg";
-   if (file_exists($path))
-   {
-    $oName = $path;
-    break;
-   }
-  }
-  if (!$oName)
-  {
-   echo "$codeStd not found in Openmoji";
-   if ($v['ver'] !== $safeSkip)
-    die("\n");
-   echo " - Skipping Latest (v$safeSkip)\n";
-   $skipped[] = $codeStd;
-   unset($db[$k]);
-   if (array_key_exists('aliases', $v))
-   {
-    foreach ($v['aliases'] as $alias)
-     unset($db[$alias]);
-   }
+  $ftCt = count($fonts);
+  if (count(array_keys($ftFiles)) !== $ftCt)
    continue;
-  }
 
-  $nName = false;
-  $nList = array($codeE);
-  if (array_key_exists('aliases', $v))
+  $ftI = 0;
+  foreach ($ftFiles as $font => $eName)
   {
-   foreach ($v['aliases'] as $alias)
-    $nList[] = 'emoji_u'.strtolower(implode('_', explode('-', $alias)));
+   $ftI++;
+   $async = (($iIDX % 5) > 0) | ($ftI < $ftCt);
+   if (substr($eName, -4) === '.png')
+    shrinkPNG($eName, "$font/$code.png", $rSz, $async);
+   else if (substr($eName, -4) === '.svg')
+    makePNGFromSVG($eName, "$font/$code.png", $rSz, $async);
+   else
+    die(" Fail!\n      Unknown File Type: $eName");
   }
-  foreach ($nList as $test)
-  {
-   $path = "sources/noto-emoji/svg/$test.svg";
-   if (file_exists($path))
-   {
-    $nName = $path;
-    break;
-   }
-   $pathF = "sources/noto-emoji/third_party/region-flags/waved-svg/$test.svg";
-   if (file_exists($pathF))
-   {
-    $nName = $pathF;
-    break;
-   }
-  }
-  if (!$nName)
-  {
-   echo "$codeStd not found in Noto";
-   if ($v['ver'] !== $safeSkip)
-    die("\n");
-   echo " - Skipping Latest (v$safeSkip)\n";
-   $skipped[] = $codeStd;
-   unset($db[$k]);
-   if (array_key_exists('aliases', $v))
-   {
-    foreach ($v['aliases'] as $alias)
-     unset($db[$alias]);
-   }
-   continue;
-  }
-
-  $bName = false;
-  $bList = array(
-   "sources/blobmoji/svg/$blobE.svg",
-   "sources/blobmoji/svg/$codeN.svg",
-   "sources/blobmoji/svg15-1/$blobE.svg",
-   "sources/blobmoji/svg15-1/$codeN.svg",
-   "sources/noto-emoji/third_party/region-flags/waved-svg/$codeE.svg"
-  );
-  if (array_key_exists('aliases', $v))
-  {
-   foreach ($v['aliases'] as $alias)
-   {
-    if (array_key_exists($alias, $blobRedir))
-     $aliasE = 'emoji_u'.strtolower(implode('_', explode('-', $blobRedir[$alias])));
-    else
-     $aliasE = 'emoji_u'.strtolower(implode('_', explode('-', $alias)));
-    $bList[] = "sources/blobmoji/svg/$aliasE.svg";
-    $bList[] = "sources/blobmoji/svg15-1/$aliasE.svg";
-    $bList[] = "sources/noto-emoji/third_party/region-flags/waved-svg/$aliasE.svg";
-   }
-  }
-  foreach ($bList as $path)
-  {
-   if (file_exists($path))
-   {
-    $bName = $path;
-    break;
-   }
-  }
-  if (!$bName)
-  {
-   echo "$codeStd not found in Blob";
-   if ($v['ver'] !== $safeSkip)
-    die("\n");
-   echo " - Skipping Latest (v$safeSkip)\n";
-   $skipped[] = $codeStd;
-   unset($db[$k]);
-   if (array_key_exists('aliases', $v))
-   {
-    foreach ($v['aliases'] as $alias)
-     unset($db[$alias]);
-   }
-   continue;
-  }
-
-  $fName = false;
-  $fList = array(ltrim(strtolower(implode('_', explode('-', $codeStd))), '0'));
-  if (array_key_exists('aliases', $v))
-  {
-   foreach ($v['aliases'] as $alias)
-    $fList[] = ltrim(strtolower(implode('_', explode('-', $alias))), '0');
-  }
-  foreach ($fList as $test)
-  {
-   $path = "sources/fbmoji/png/$test.png";
-   if (file_exists($path))
-   {
-    $fName = $path;
-    break;
-   }
-  }
-  if (!$fName)
-  {
-   echo "$codeStd not found in Facebook";
-   if ($v['ver'] !== $safeSkip)
-    die("\n");
-   echo " - Skipping Latest (v$safeSkip)\n";
-   $skipped[] = $codeStd;
-   unset($db[$k]);
-   if (array_key_exists('aliases', $v))
-   {
-    foreach ($v['aliases'] as $alias)
-     unset($db[$alias]);
-   }
-   continue;
-  }
-
-  $jName = false;
-  $jList = array($codeJoy);
-  if (array_key_exists('aliases', $v))
-  {
-   foreach ($v['aliases'] as $alias)
-    $jList[] = str_replace('-200d', '', $alias);
-  }
-  foreach ($jList as $test)
-  {
-   $path = "sources/joypixels/png/128/$test.png";
-   if (file_exists($path))
-   {
-    $jName = $path;
-    break;
-   }
-  }
-  if (!$jName)
-  {
-   echo "$codeStd not found in JoyPixels";
-   if ($v['ver'] !== $safeSkip)
-    die("\n");
-   echo " - Skipping Latest (v$safeSkip)\n";
-   $skipped[] = $codeStd;
-   unset($db[$k]);
-   if (array_key_exists('aliases', $v))
-   {
-    foreach ($v['aliases'] as $alias)
-     unset($db[$alias]);
-   }
-   continue;
-  }
-
-  $aName = false;
-  $aList = array($appleE);
-  if (array_key_exists('aliases', $v))
-  {
-   foreach ($v['aliases'] as $alias)
-   {
-    if (array_key_exists($alias, $appleRedir))
-     $aList[] = 'emoji_u'.strtolower(implode('_', explode('-', $appleRedir[$alias])));
-    else
-     $aList[] = 'emoji_u'.strtolower(implode('_', explode('-', $alias)));
-   }
-  }
-  foreach ($aList as $test)
-  {
-   $path = "sources/apple-emoji-linux/png/160/$test.png";
-   if (file_exists($path))
-   {
-    $aName = $path;
-    break;
-   }
-  }
-  if (!$aName)
-  {
-   echo "$codeStd not found in Apple";
-   if ($v['ver'] !== $safeSkip)
-    die("\n");
-   echo " - Skipping Latest (v$safeSkip)\n";
-   $skipped[] = $codeStd;
-   unset($db[$k]);
-   if (array_key_exists('aliases', $v))
-   {
-    foreach ($v['aliases'] as $alias)
-     unset($db[$alias]);
-   }
-   continue;
-  }
-
-  $tfName = false;
-  $tfList = array($codeToss);
-  if (array_key_exists('aliases', $v))
-  {
-   foreach ($v['aliases'] as $alias)
-   {
-    $tfList[] = str_replace('U', 'u', strtoupper('U'.implode('_U', explode('-', $alias))));
-   }
-  }
-  foreach ($tfList as $test)
-  {
-   $path = "sources/tossface/dist/svg/$test.svg";
-   if (file_exists($path))
-   {
-    $tfName = $path;
-    break;
-   }
-  }
-  if (!$tfName)
-  {
-   echo "$codeStd not found in Toss Face";
-   if ($v['ver'] !== $safeSkip)
-    die("\n");
-   echo " - Skipping Latest (v$safeSkip)\n";
-   $skipped[] = $codeStd;
-   unset($db[$k]);
-   if (array_key_exists('aliases', $v))
-   {
-    foreach ($v['aliases'] as $alias)
-     unset($db[$alias]);
-   }
-   continue;
-  }
-
-  shrinkPNG($fName, "facebook/$codeStd.png", $rSz);
-  shrinkPNG($jName, "joypixels/$codeStd.png", $rSz);
-  shrinkPNG($aName, "apple/$codeStd.png", $rSz);
-  makePNGFromSVG($tName, "twemoji/$codeStd.png", $rSz);
-  makePNGFromSVG($oName, "openmoji/$codeStd.png", $rSz);
-  makePNGFromSVG($nName, "noto/$codeStd.png", $rSz);
-  makePNGFromSVG($bName, "blob/$codeStd.png", $rSz);
-  makePNGFromSVG($tfName, "tossface/$codeStd.png", $rSz, false);
+  echo " Done!\n";
  }
+
  file_put_contents('list.json', json_encode($db, JSON_PRETTY_PRINT));
  $dbMin = array();
+
  foreach ($db as $id => $v)
  {
   $dbMin[$id] = $v;
@@ -467,17 +132,265 @@
   }
   if (array_key_exists('status', $dbMin[$id]))
   {
-   if (array_key_exists($dbMin[$id]['status'], $stats))
-    $dbMin[$id]['s'] = $stats[$dbMin[$id]['status']];
+   if (array_key_exists($dbMin[$id]['status'], $GLOBALS['stats']))
+    $dbMin[$id]['s'] = $GLOBALS['stats'][$dbMin[$id]['status']];
    unset($dbMin[$id]['status']);
   }
   if (count(array_keys($dbMin[$id])) === 0)
    $dbMin[$id] = 1;
  }
  file_put_contents('list.min.json', json_encode($dbMin));
+
  if (count($skipped) > 0)
   echo 'Skipped '.count($skipped)." Emoji(s) from v$safeSkip (Latest)\n";
+
  echo "Process Complete.\n";
+
+
+ function fileReadAlias($source)
+ {
+  $tmpR = explode("\n", file_get_contents('sources/'.$source.'/emoji_aliases.txt'));
+  $r = array();
+  for ($i = 0; $i < count($tmpR); $i++)
+  {
+   if (empty($tmpR[$i]))
+    continue;
+   if (substr($tmpR[$i], 0, 1) === '#')
+    continue;
+   if (!str_contains($tmpR[$i], ';'))
+    continue;
+   $from = substr($tmpR[$i], 0, strpos($tmpR[$i], ';'));
+   $to = substr($tmpR[$i], strpos($tmpR[$i], ';') + 1);
+   if (str_contains($to, '#'))
+    $to = substr($to, 0, strpos($to, '#'));
+   $from = strtolower(trim($from));
+   $to = strtolower(trim($to));
+   $from = implode('-', explode('_', $from));
+   $to = implode('-', explode('_', $to));
+   $r[$from] = $to;
+  }
+  return $r;
+ }
+
+ function dbReadTXT($v, &$safeSkip)
+ {
+  $db = array();
+  $group = 'Ungrouped';
+  $subgroup = 'none';
+  $data = file_get_contents('https://unicode.org/Public/emoji/'.$v.'/emoji-test.txt');
+  $lns = explode("\n", $data);
+  $safeSkip = $v;
+  for ($i = 0; $i < count($lns); $i++)
+  {
+   if (empty($lns[$i]))
+    continue;
+   if (substr($lns[$i], 0, 1) === '#')
+   {
+    if (strlen($lns[$i]) > 11 && substr($lns[$i], 0, 11) === '# Version: ')
+     $safeSkip = trim(substr($lns[$i], 11));
+    if (strlen($lns[$i]) > 9 && substr($lns[$i], 0, 9) === '# group: ')
+     $group = trim(substr($lns[$i], 9));
+    if (strlen($lns[$i]) > 12 && substr($lns[$i], 0, 12) === '# subgroup: ')
+     $subgroup = trim(substr($lns[$i], 12));
+    continue;
+   }
+   if (!str_contains($lns[$i], ';'))
+    continue;
+   if (!str_contains($lns[$i], '#'))
+    continue;
+   $code = explode(' ', trim(substr($lns[$i], 0, strpos($lns[$i], ';'))));
+   $status = substr($lns[$i], strpos($lns[$i], ';') + 1);
+   $status = trim(substr($status, 0, strpos($status, '#')));
+   $details = explode(' ', trim(substr($lns[$i], strpos($lns[$i], '#') + 1)), 3);
+   if (count($details) !== 3)
+    continue;
+   $value = $details[0];
+   $version = $details[1];
+   if (substr($version, 0, 1) !== 'E')
+    continue;
+   $version = substr($version, 1);
+   $name = $details[2];
+   $codeStd = strtolower(implode('-', $code));
+   if (!array_key_exists($status, $GLOBALS['stats']))
+    continue;
+   if ($GLOBALS['stats'][$status] < 1)
+    $db[$codeStd] = array('target' => $name, 'status' => $status);
+   else
+    $db[$codeStd] = array('name' => $name, 'ver' => $version, 'group' => $group, 'subgroup' => $subgroup);
+  }
+  return $db;
+ }
+
+ function dbGroupAliases(&$db)
+ {
+  foreach ($db as $k => $v)
+  {
+   if (!array_key_exists('target', $v))
+    continue;
+   $found = false;
+   foreach ($db as $k2 => $v2)
+   {
+    if (!array_key_exists('name', $v2))
+     continue;
+    if ($v2['name'] !== $v['target'])
+     continue;
+    $db[$k]['target'] = $k2;
+    if (!array_key_exists('aliases', $v2))
+     $db[$k2]['aliases'] = array();
+    $db[$k2]['aliases'][] = strval($k);
+    $found = true;
+    break;
+   }
+   if (!$found)
+    unset($db[$k]);
+  }
+  return $db;
+ }
+
+ function emojiParse($codeStd, $font, $fontPath, $name = false, $aliases = false, $redirs = false)
+ {
+  $codeCB = 'code_'.$font;
+  $nameCB = 'name_'.$font;
+
+  $fList = array();
+
+  $fRet = call_user_func($codeCB, $codeStd, $fontPath, $redirs);
+  if ($fRet !== false)
+   $fList = array_merge($fList, $fRet);
+
+  if ($name !== false)
+  {
+   $fRet = call_user_func($nameCB, $name, $fontPath);
+   if ($fRet !== false)
+    $fList = array_merge($fList, $fRet);
+  }
+
+  if ($aliases !== false)
+  {
+   foreach ($aliases as $alias)
+   {
+    $fRet = call_user_func($codeCB, $alias, $fontPath, $redirs);
+    if ($fRet !== false)
+     $fList = array_merge($fList, $fRet);
+   }
+  }
+
+  foreach ($fList as $test)
+  {
+   if (file_exists($test))
+   {
+    return $test;
+    break;
+   }
+  }
+  return false;
+ }
+
+ function code_twemoji($codeStd, $fontPath, $redirs = false)
+ {
+  $c = ltrim($codeStd, '0');
+  if ($redirs !== false && array_key_exists($codeStd, $redirs))
+   $c = ltrim($redirs[$codeStd], '0');
+  $r = array();
+  $r[] = "sources/$fontPath/assets/svg/$c.svg";
+  return $r;
+ }
+
+ function name_twemoji($name, $fontPath){return false;}
+
+ function code_openmoji($codeStd, $fontPath, $redirs = false)
+ {
+  $c = strtoupper($codeStd);
+  if ($redirs !== false && array_key_exists($codeStd, $redirs))
+   $c = strtoupper($redirs[$codeStd]);
+  $r = array();
+  $r[] = "sources/$fontPath/color/svg/$c.svg";
+  return $r;
+ }
+
+ function name_openmoji($name, $fontPath){return false;}
+
+ function code_noto($codeStd, $fontPath, $redirs = false)
+ {
+  $c = 'emoji_u'.strtolower(implode('_', explode('-', $codeStd)));
+  if ($redirs !== false && array_key_exists($codeStd, $redirs))
+   $c = 'emoji_u'.strtolower(implode('_', explode('-', $redirs[$codeStd])));
+  $r = array();
+  $r[] = "sources/$fontPath/svg/$c.svg";
+  $r[] = "sources/$fontPath/third_party/region-flags/waved-svg/$c.svg";
+  return $r;
+ }
+
+ function name_noto($name, $fontPath){return false;}
+
+ function code_blob($codeStd, $fontPath, $redirs = false)
+ {
+  $r = array();
+  $n = 'emoji_u'.strtolower(implode('_', explode('-', $codeStd)));
+  if ($redirs !== false && array_key_exists($codeStd, $redirs))
+   $n = 'emoji_u'.strtolower(implode('_', explode('-', $redirs[$codeStd])));
+  $r[] = "sources/$fontPath/svg/$n.svg";
+  $r[] = "sources/$fontPath/svg15-1/$n.svg";
+  $r[] = "sources/noto-emoji/third_party/region-flags/waved-svg/$n.svg";
+  return $r;
+ }
+
+ function name_blob($name, $fontPath)
+ {
+  $r = array();
+  $n = strtolower(preg_replace('/[^\p{Lu}\p{Ll}0-9\- ]/u', '', $name));
+  $r[] = "sources/$fontPath/svg/$n.svg";
+  $r[] = "sources/$fontPath/svg15-1/$n.svg";
+  return $r;
+ }
+
+ function code_facebook($codeStd, $fontPath, $redirs = false)
+ {
+  $r = array();
+  $n = ltrim(strtolower(implode('_', explode('-', $codeStd))), '0');
+  if ($redirs !== false && array_key_exists($codeStd, $redirs))
+   $n = ltrim(strtolower(implode('_', explode('-', $redirs[$codeStd]))), '0');
+  $r[] = "sources/$fontPath/png/$n.png";
+  return $r;
+ }
+
+ function name_facebook($name, $fontPath){return false;}
+
+ function code_joypixels($codeStd, $fontPath, $redirs = false)
+ {
+  $r = array();
+  $n = str_replace('-200d', '', $codeStd);
+  if ($redirs !== false && array_key_exists($codeStd, $redirs))
+   $n = str_replace('-200d', '', $redirs[$codeStd]);
+  $r[] = "sources/$fontPath/png/128/$n.png";
+  return $r;
+ }
+
+ function name_joypixels($name, $fontPath){return false;}
+
+ function code_apple($codeStd, $fontPath, $redirs = false)
+ {
+  $r = array();
+  $n = 'emoji_u'.strtolower(implode('_', explode('-', $codeStd)));
+  if ($redirs !== false && array_key_exists($codeStd, $redirs))
+   $n = 'emoji_u'.strtolower(implode('_', explode('-', $redirs[$codeStd])));
+  $r[] = "sources/$fontPath/png/160/$n.png";
+  return $r;
+ }
+
+ function name_apple($name, $fontPath){return false;}
+
+ function code_tossface($codeStd, $fontPath, $redirs = false)
+ {
+  $r = array();
+  $n = str_replace('U', 'u', strtoupper('U'.implode('_U', explode('-', $codeStd))));
+  if ($redirs !== false && array_key_exists($codeStd, $redirs))
+   $n = str_replace('U', 'u', strtoupper('U'.implode('_U', explode('-', $redirs[$codeStd]))));
+  $r[] = "sources/$fontPath/dist/svg/$n.svg";
+  return $r;
+ }
+
+ function name_tossface($name, $fontPath){return false;}
 
  function makePNGFromSVG($svg, $png, $h = 112, $async = true)
  {
@@ -492,11 +405,14 @@
   else
    exec($inkscape);
  }
+
  function shrinkPNG($src, $png, $h = 112, $async = true)
  {
   $convert = 'convert';
-  $convert.= ' "'.$src.'"';
   $convert.= ' -resize 112x112^';
+  $convert.= ' -strip';
+  $convert.= ' -define png:compression-level=9';
+  $convert.= ' "'.$src.'"';
   $convert.= ' "png32:'.$png.'"';
   if ($async)
    exec("bash -c 'exec nohup setsid $convert > /dev/null 2>&1 &'");
