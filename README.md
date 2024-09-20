@@ -51,7 +51,7 @@ This is the main parsing utility and has 3 overloads per parsing type.
 
 Although there are two kinds of parsing supported by this utility, we recommend you use [DOM parsing](#dom-parsing), explained below. Each type of parsing accepts a callback to generate an image source or an options object with parsing info.
 
-The second kind of parsing is string parsing, explained in the legacy documentation [here](LEGACY.md#string-parsing). This is unrecommended because this method does not sanitize the string or otherwise prevent malicious code from being executed; such sanitization is out of scope.
+The second kind of parsing is string parsing, explained in the legacy documentation [here](https://github.com/jdecked/twemoji/blob/main/LEGACY.md#string-parsing). This is unrecommended because this method does not sanitize the string or otherwise prevent malicious code from being executed; such sanitization is out of scope.
 
 #### DOM parsing
 
@@ -195,4 +195,4 @@ remoji.parse(document.body, {
 
 ## Legacy API (V1)
 
-If you're still using Twemoji's V1 API, you can find legacy documentation [here](sources/twemoji/LEGACY.md).
+If you're still using Twemoji's V1 API, you can find legacy documentation [here](https://github.com/jdecked/twemoji/blob/main/LEGACY.md).
