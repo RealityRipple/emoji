@@ -18,14 +18,10 @@ var remoji = (function (
     /////////////////////////
 
       // default assets url, by default will be jsDelivr CDN
-      base: 'https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/',
+      base: 'https://cdn.jsdelivr.net/gh/realityripple/emoji/',
 
-      // default assets file extensions, by default '.png'
-      ext: '.png',
-
-      // default assets/folder size, by default "72x72"
-      // available via Twitter CDN: 72
-      size: '72x72',
+      // default emoji font, by default 'twemoji'
+      font: 'twemoji',
 
       // default class name, by default 'emoji'
       className: 'emoji',
@@ -147,28 +143,27 @@ var remoji = (function (
        *
        *            callback   Function  the callback to invoke per each found emoji.
        *            base       string    the base url, by default remoji.base
-       *            ext        string    the image extension, by default remoji.ext
-       *            size       string    the assets size, by default remoji.size
+       *            font       string    the emoji font, by default remoji.font
        *
        * @example
        *
        *  remoji.parse("I \u2764\uFE0F emoji!");
-       *  // I <img class="emoji" draggable="false" alt="❤️" src="/assets/2764.gif"/> emoji!
+       *  // I <img class="emoji" draggable="false" alt="❤️" src="/twemoji/2764.png"/> emoji!
        *
        *
        *  remoji.parse("I \u2764\uFE0F emoji!", function(iconId, options) {
-       *    return '/assets/' + iconId + '.gif';
+       *    return '/facebook/' + iconId + '.png';
        *  });
-       *  // I <img class="emoji" draggable="false" alt="❤️" src="/assets/2764.gif"/> emoji!
+       *  // I <img class="emoji" draggable="false" alt="❤️" src="/facebook/2764.png"/> emoji!
        *
        *
        * remoji.parse("I \u2764\uFE0F emoji!", {
-       *   size: 72,
+       *   font: 'apple',
        *   callback: function(iconId, options) {
-       *     return '/assets/' + options.size + '/' + iconId + options.ext;
+       *     return '/' + options.font + '/' + iconId + '.png';
        *   }
        * });
-       *  // I <img class="emoji" draggable="false" alt="❤️" src="/assets/72x72/2764.png"/> emoji!
+       *  // I <img class="emoji" draggable="false" alt="❤️" src="/apple/2764.png"/> emoji!
        *
        */
       parse: parse,
@@ -267,11 +262,11 @@ var remoji = (function (
    * Default callback used to generate emoji src
    *  based on Twitter CDN
    * @param   string    the emoji codepoint string
-   * @param   string    the default size to use, i.e. "36x36"
+   * @param   string    the default emoji font to use, i.e. "twemoji"
    * @return  string    the image source to use
    */
   function defaultImageSrcGenerator(icon, options) {
-    return ''.concat(options.base, options.size, '/', icon, options.ext);
+    return ''.concat(options.base, options.font, '/', icon, '.png');
   }
 
   /**
@@ -328,8 +323,7 @@ var remoji = (function (
     *
     *            .callback   Function  the callback to invoke per each found emoji.
     *            .base       string    the base url, by default remoji.base
-    *            .ext        string    the image extension, by default remoji.ext
-    *            .size       string    the assets size, by default remoji.size
+    *            .font       string    the emoji font, by default remoji.font
     *
    * @return  Element same generic node with emoji in place, if any.
    */
@@ -415,8 +409,7 @@ var remoji = (function (
    *
    *            .callback   Function  the callback to invoke per each found emoji.
    *            .base       string    the base url, by default remoji.base
-   *            .ext        string    the image extension, by default remoji.ext
-   *            .size       string    the assets size, by default remoji.size
+   *            .font       string    the emoji font, by default remoji.font
    *
    * @return  the string with <img tags> replacing all found and parsed emoji
    */
@@ -477,20 +470,6 @@ var remoji = (function (
     return null;
   }
 
-  /**
-   * Given a generic value, creates its squared counterpart if it's a number.
-   *  As example, number 36 will return '36x36'.
-   * @param   any     a generic value.
-   * @return  any     a string representing asset size, i.e. "36x36"
-   *                  only in case the value was a number.
-   *                  Returns initial value otherwise.
-   */
-  function toSizeSquaredAsset(value) {
-    return typeof value === 'number' ?
-      value + 'x' + value :
-      value;
-  }
-
 
   /////////////////////////
   //  exported functions //
@@ -520,8 +499,7 @@ var remoji = (function (
       callback:   how.callback || defaultImageSrcGenerator,
       attributes: typeof how.attributes === 'function' ? how.attributes : returnNull,
       base:       typeof how.base === 'string' ? how.base : remoji.base,
-      ext:        how.ext || remoji.ext,
-      size:       how.folder || toSizeSquaredAsset(how.size || remoji.size),
+      font:       how.font || remoji.font,
       className:  how.className || remoji.className,
       onerror:    how.onerror || remoji.onerror
     });
