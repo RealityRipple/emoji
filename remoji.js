@@ -542,6 +542,13 @@ var remoji = (function (
     return result;
   }
 
+  function zeroPad(num, min) {
+   while (num.length < min) {
+    num = '0' + num;
+   }
+   return num;
+  }
+
   function toCodePoint(unicodeSurrogates, sep) {
     var
       r = [],
@@ -551,12 +558,12 @@ var remoji = (function (
     while (i < unicodeSurrogates.length) {
       c = unicodeSurrogates.charCodeAt(i++);
       if (p) {
-        r.push((0x10000 + ((p - 0xD800) << 10) + (c - 0xDC00)).toString(16));
+        r.push(zeroPad((0x10000 + ((p - 0xD800) << 10) + (c - 0xDC00)).toString(16), 4));
         p = 0;
       } else if (0xD800 <= c && c <= 0xDBFF) {
         p = c;
       } else {
-        r.push(c.toString(16));
+        r.push(zeroPad(c.toString(16), 4));
       }
     }
     return r.join(sep || '-');
