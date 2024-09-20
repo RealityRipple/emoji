@@ -1,14 +1,8 @@
 /*jslint indent: 2, browser: true, bitwise: true, plusplus: true */
-var twemoji = (function (
+var remoji = (function (
   /*! Copyright Twitter Inc. and other contributors. Licensed under MIT *//*
     https://github.com/jdecked/twemoji/blob/gh-pages/LICENSE
   */
-
-  // WARNING:   this file is generated automatically via
-  //            `node scripts/build.js`
-  //            please update its `createTwemoji` function
-  //            at the bottom of the same file instead.
-
 ) {
   'use strict';
 
@@ -16,7 +10,7 @@ var twemoji = (function (
 
   var
     // the exported module object
-    twemoji = {
+    remoji = {
 
 
     /////////////////////////
@@ -48,10 +42,10 @@ var twemoji = (function (
          *          i.e. \uD83D\uDCA9
          *
          * @example
-         *  twemoji.convert.fromCodePoint('1f1e8');
+         *  remoji.convert.fromCodePoint('1f1e8');
          *  // "\ud83c\udde8"
          *
-         *  '1f1e8-1f1f3'.split('-').map(twemoji.convert.fromCodePoint).join('')
+         *  '1f1e8-1f1f3'.split('-').map(remoji.convert.fromCodePoint).join('')
          *  // "\ud83c\udde8\ud83c\uddf3"
          */
         fromCodePoint: fromCodePoint,
@@ -64,10 +58,10 @@ var twemoji = (function (
          * @return  string  utf16 transformed into codepoint, i.e. '1F4A9'
          *
          * @example
-         *  twemoji.convert.toCodePoint('\ud83c\udde8\ud83c\uddf3');
+         *  remoji.convert.toCodePoint('\ud83c\udde8\ud83c\uddf3');
          *  // "1f1e8-1f1f3"
          *
-         *  twemoji.convert.toCodePoint('\ud83c\udde8\ud83c\uddf3', '~');
+         *  remoji.convert.toCodePoint('\ud83c\udde8\ud83c\uddf3', '~');
          *  // "1f1e8~1f1f3"
          */
         toCodePoint: toCodePoint
@@ -84,7 +78,7 @@ var twemoji = (function (
        * a fallback for network problems is desired.
        * Automatically added to Image nodes via DOM
        * It could be recycled for string operations via:
-       *  $('img.emoji').on('error', twemoji.onerror)
+       *  $('img.emoji').on('error', remoji.onerror)
        */
       onerror: function onerror() {
         if (this.parentNode) {
@@ -99,14 +93,14 @@ var twemoji = (function (
        * @overloads
        *
        * String replacement for `innerHTML` or server side operations
-       *  twemoji.parse(string);
-       *  twemoji.parse(string, Function);
-       *  twemoji.parse(string, Object);
+       *  remoji.parse(string);
+       *  remoji.parse(string, Function);
+       *  remoji.parse(string, Object);
        *
        * HTMLElement tree parsing for safer operations over existing DOM
-       *  twemoji.parse(HTMLElement);
-       *  twemoji.parse(HTMLElement, Function);
-       *  twemoji.parse(HTMLElement, Object);
+       *  remoji.parse(HTMLElement);
+       *  remoji.parse(HTMLElement, Function);
+       *  remoji.parse(HTMLElement, Object);
        *
        * @param   string|HTMLElement  the source to parse and enrich with emoji.
        *
@@ -152,23 +146,23 @@ var twemoji = (function (
        *          Object              if specified, an object containing the following properties
        *
        *            callback   Function  the callback to invoke per each found emoji.
-       *            base       string    the base url, by default twemoji.base
-       *            ext        string    the image extension, by default twemoji.ext
-       *            size       string    the assets size, by default twemoji.size
+       *            base       string    the base url, by default remoji.base
+       *            ext        string    the image extension, by default remoji.ext
+       *            size       string    the assets size, by default remoji.size
        *
        * @example
        *
-       *  twemoji.parse("I \u2764\uFE0F emoji!");
+       *  remoji.parse("I \u2764\uFE0F emoji!");
        *  // I <img class="emoji" draggable="false" alt="❤️" src="/assets/2764.gif"/> emoji!
        *
        *
-       *  twemoji.parse("I \u2764\uFE0F emoji!", function(iconId, options) {
+       *  remoji.parse("I \u2764\uFE0F emoji!", function(iconId, options) {
        *    return '/assets/' + iconId + '.gif';
        *  });
        *  // I <img class="emoji" draggable="false" alt="❤️" src="/assets/2764.gif"/> emoji!
        *
        *
-       * twemoji.parse("I \u2764\uFE0F emoji!", {
+       * remoji.parse("I \u2764\uFE0F emoji!", {
        *   size: 72,
        *   callback: function(iconId, options) {
        *     return '/assets/' + options.size + '/' + iconId + options.ext;
@@ -207,7 +201,7 @@ var twemoji = (function (
        *
        * @example
        *
-       *  if (twemoji.test(someContent)) {
+       *  if (remoji.test(someContent)) {
        *    console.log("emoji All The Things!");
        *  }
        */
@@ -243,7 +237,7 @@ var twemoji = (function (
     // just a private shortcut
     fromCharCode = String.fromCharCode;
 
-  return twemoji;
+  return remoji;
 
 
   /////////////////////////
@@ -333,9 +327,9 @@ var twemoji = (function (
    * @param   Object    options  containing info about how to parse
     *
     *            .callback   Function  the callback to invoke per each found emoji.
-    *            .base       string    the base url, by default twemoji.base
-    *            .ext        string    the image extension, by default twemoji.ext
-    *            .size       string    the assets size, by default twemoji.size
+    *            .base       string    the base url, by default remoji.base
+    *            .ext        string    the image extension, by default remoji.ext
+    *            .size       string    the assets size, by default remoji.size
     *
    * @return  Element same generic node with emoji in place, if any.
    */
@@ -420,9 +414,9 @@ var twemoji = (function (
    * @param   Object    options  containing info about how to parse
    *
    *            .callback   Function  the callback to invoke per each found emoji.
-   *            .base       string    the base url, by default twemoji.base
-   *            .ext        string    the image extension, by default twemoji.ext
-   *            .size       string    the assets size, by default twemoji.size
+   *            .base       string    the base url, by default remoji.base
+   *            .ext        string    the image extension, by default remoji.ext
+   *            .size       string    the assets size, by default remoji.size
    *
    * @return  the string with <img tags> replacing all found and parsed emoji
    */
@@ -525,11 +519,11 @@ var twemoji = (function (
     return (typeof what === 'string' ? parseString : parseNode)(what, {
       callback:   how.callback || defaultImageSrcGenerator,
       attributes: typeof how.attributes === 'function' ? how.attributes : returnNull,
-      base:       typeof how.base === 'string' ? how.base : twemoji.base,
-      ext:        how.ext || twemoji.ext,
-      size:       how.folder || toSizeSquaredAsset(how.size || twemoji.size),
-      className:  how.className || twemoji.className,
-      onerror:    how.onerror || twemoji.onerror
+      base:       typeof how.base === 'string' ? how.base : remoji.base,
+      ext:        how.ext || remoji.ext,
+      size:       how.folder || toSizeSquaredAsset(how.size || remoji.size),
+      className:  how.className || remoji.className,
+      onerror:    how.onerror || remoji.onerror
     });
   }
 
