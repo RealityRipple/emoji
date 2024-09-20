@@ -26,6 +26,10 @@ var remoji = (function (
       // default class name, by default 'emoji'
       className: 'emoji',
 
+      // list of supported emoji codepoints
+      // important: check if `false` before using this class
+      list: false,
+
       // basic utilities / helpers to convert code points
       // to JavaScript surrogates and vice versa
       convert: {
@@ -220,9 +224,6 @@ var remoji = (function (
     // not JIT based, and old browsers / engines
     UFE0Fg = /\uFE0F/g,
 
-    // avoid using a string literal like '\u200D' here because minifiers expand it inline
-    U200D = String.fromCharCode(0x200D),
-
     // used to find HTML special chars in attributes
     rescaper = /[&<>'"]/g,
 
@@ -232,6 +233,8 @@ var remoji = (function (
     // just a private shortcut
     fromCharCode = String.fromCharCode;
 
+  loadList();
+
   return remoji;
 
 
@@ -239,6 +242,23 @@ var remoji = (function (
   //  private functions  //
   //     declaration     //
   /////////////////////////
+
+  /**
+   * Load the list of supported emojis asynchronously
+   */
+  function loadList() {
+   var xhr = new XMLHttpRequest();
+   xhr.open('GET', remoji.base + 'list.min.json');
+   xhr.timeout = 10000;
+   xhr.onreadystatechange = function() {
+    if (xhr.readyState !== 4) {
+     return;
+    }
+    xhr.onreadystatechange = null;
+    remoji.list = JSON.parse(xhr.responseText);
+   };
+   xhr.send();
+  }
 
   /**
    * Shortcut to create text nodes
@@ -301,18 +321,23 @@ var remoji = (function (
   }
 
   /**
-   * Used to both remove the possible variant
+   * Used to both match any possible variants
    *  and to convert utf16 into code points.
-   *  If there is a zero-width-joiner (U+200D), leave the variants in.
    * @param   string    the raw text of the emoji match
    * @return  string    the code point
    */
   function grabTheRightIcon(rawText) {
-    // if variant is present as \uFE0F
-    return toCodePoint(rawText.indexOf(U200D) < 0 ?
-      rawText.replace(UFE0Fg, '') :
-      rawText
-    );
+   var cPoint = toCodePoint(rawText);
+   if (cPoint in remoji.list) {
+    if (remoji.list[cPoint] === 1) {
+     return cPoint;
+    }
+    if ('t' in remoji.list[cPoint]) {
+     return remoji.list[cPoint].t;
+    }
+    return cPoint;
+   }
+   return toCodePoint(rawText);
   }
 
   /**
