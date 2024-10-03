@@ -183,8 +183,8 @@ To exclude certain characters from being replaced by remoji.js, call remoji.pars
 remoji.parse(document.body, {
     callback: function(icon, options, variant) {
         switch ( icon ) {
-            case 'a9':      // © copyright
-            case 'ae':      // ® registered trademark
+            case '00a9':    // © copyright
+            case '00ae':    // ® registered trademark
             case '2122':    // ™ trademark
                 return false;
         }
