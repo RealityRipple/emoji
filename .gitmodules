@@ -4,28 +4,21 @@
 [submodule "sources/blobmoji"]
 	path = sources/blobmoji
 	url = https://github.com/RealityRipple/blobmoji.git
-	branch = emoji15.1
 [submodule "sources/openmoji"]
 	path = sources/openmoji
 	url = https://github.com/hfg-gmuend/openmoji.git
-	branch = master
 [submodule "sources/twemoji"]
 	path = sources/twemoji
 	url = https://github.com/jdecked/twemoji.git
-	branch = main
 [submodule "sources/fbmoji"]
 	path = sources/fbmoji
 	url = https://github.com/RealityRipple/fbmoji.git
-	branch = master
 [submodule "sources/joypixels"]
 	path = sources/joypixels
 	url = https://github.com/joypixels/emoji-assets.git
-	branch = master
 [submodule "sources/apple-emoji-linux"]
 	path = sources/apple-emoji-linux
 	url = https://github.com/samuelngs/apple-emoji-linux.git
-	branch = ios-16.4
 [submodule "sources/tossface"]
 	path = sources/tossface
 	url = https://github.com/toss/tossface
-	branch = main
