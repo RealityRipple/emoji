@@ -9,7 +9,7 @@
 	url = https://github.com/hfg-gmuend/openmoji.git
 [submodule "sources/twemoji"]
 	path = sources/twemoji
-	url = https://github.com/jdecked/twemoji.git
+	url = https://github.com/RealityRipple/twemoji.git
 [submodule "sources/fbmoji"]
 	path = sources/fbmoji
 	url = https://github.com/RealityRipple/fbmoji.git
