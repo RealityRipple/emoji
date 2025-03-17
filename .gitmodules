@@ -1,6 +1,6 @@
 [submodule "sources/noto-emoji"]
 	path = sources/noto-emoji
-	url = https://github.com/googlefonts/noto-emoji.git
+	url = https://github.com/Kademo1/noto-emoji.git
 [submodule "sources/blobmoji"]
 	path = sources/blobmoji
 	url = https://github.com/RealityRipple/blobmoji.git
