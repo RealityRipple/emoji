@@ -22,3 +22,6 @@
 [submodule "sources/tossface"]
 	path = sources/tossface
 	url = https://github.com/toss/tossface
+[submodule "sources/whatsapp-emoji-linux"]
+	path = sources/whatsapp-emoji-linux
+	url = https://github.com/dmlls/whatsapp-emoji-linux.git

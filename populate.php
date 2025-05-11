@@ -10,7 +10,8 @@
   'facebook' => 'fbmoji',
   'joypixels' => 'joypixels',
   'apple' => 'apple-emoji-linux',
-  'tossface' => 'tossface');
+  'tossface' => 'tossface',
+  'whatsapp' => 'whatsapp-emoji-linux');
 
  $redirs = array();
  foreach ($fonts as $font => $fontPath)
@@ -26,6 +27,7 @@
  copy('sources/fbmoji/LICENSE', './LICENSE-FACEBOOK');
  copy('sources/joypixels/LICENSE.md', './LICENSE-JOYPIXELS');
  copy('sources/tossface/LICENSE', './LICENSE-TOSSFACE');
+ copy('sources/whatsapp-emoji-linux/LICENSE', './LICENSE-WHATSAPP');
 
  $GLOBALS['stats'] = array(
   'unqualified' => -1,
@@ -391,6 +393,18 @@
  }
 
  function name_tossface($name, $fontPath){return false;}
+
+ function code_whatsapp($codeStd, $fontPath, $redirs = false)
+ {
+  $r = array();
+  $n = 'emoji_u'.strtolower(implode('_', explode('-', $codeStd)));
+  if ($redirs !== false && array_key_exists($codeStd, $redirs))
+   $n = 'emoji_u'.strtolower(implode('_', explode('-', $redirs[$codeStd])));
+  $r[] = "sources/$fontPath/png/160/$n.png";
+  return $r;
+ }
+
+ function name_whatsapp($name, $fontPath){return false;}
 
  function makePNGFromSVG($svg, $png, $h = 112, $async = true)
  {
