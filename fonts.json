@@ -34,5 +34,9 @@
  "whatsapp": {
   "title": "WhatsApp",
   "source": "https://github.com/dmlls/whatsapp-emoji-linux"
+ },
+ "oneui": {
+  "title": "Samsung OneUI Emoji",
+  "source": "https://github.com/RealityRipple/oneui-emoji"
  }
 }

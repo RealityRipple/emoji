@@ -11,7 +11,8 @@
   'joypixels' => 'joypixels',
   'apple' => 'apple-emoji-linux',
   'tossface' => 'tossface',
-  'whatsapp' => 'whatsapp-emoji-linux');
+  'whatsapp' => 'whatsapp-emoji-linux',
+  'oneui' => 'oneui-emoji');
 
  $redirs = array();
  foreach ($fonts as $font => $fontPath)
@@ -28,6 +29,7 @@
  copy('sources/joypixels/LICENSE.md', './LICENSE-JOYPIXELS');
  copy('sources/tossface/LICENSE', './LICENSE-TOSSFACE');
  copy('sources/whatsapp-emoji-linux/LICENSE', './LICENSE-WHATSAPP');
+ copy('sources/oneui-emoji/LICENSE', './LICENSE-ONEUI');
 
  $GLOBALS['stats'] = array(
   'unqualified' => -1,
@@ -405,6 +407,15 @@
  }
 
  function name_whatsapp($name, $fontPath){return false;}
+
+ function code_oneui($codeStd, $fontPath, $redirs = false)
+ {
+  $r = array();
+  $r[] = "sources/$fontPath/png/112/$codeStd.png";
+  return $r;
+ }
+
+ function name_oneui($name, $fontPath){return false;}
 
  function makePNGFromSVG($svg, $png, $h = 112, $async = true)
  {

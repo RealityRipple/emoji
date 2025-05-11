@@ -1,5 +1,5 @@
 # Emoji Directory
-A directory of Emojis in 112x112 pixel PNG format, from Twemoji, Openmoji, Noto, Blobmoji, Facebook, Apple, JoyPixels, Toss Face, and WhatsApp fonts.  
+A directory of Emojis in 112x112 pixel PNG format, from Twemoji, Openmoji, Noto, Blobmoji, Facebook, Apple, JoyPixels, Toss Face, WhatsApp, and OneUI fonts.  
 
 ## Requirements
  - Building the image list with `populate.php` requires `php-cli`. No extensions are required.  
@@ -29,7 +29,7 @@ Retrieve the required emoji:
 
 Where:  
 
- - `%FONT%` is `twemoji`, `openmoji`, `noto`, `blob`, `facebook`, `apple`, `joypixels`, `tossface`, or `whatsapp`  
+ - `%FONT%` is `twemoji`, `openmoji`, `noto`, `blob`, `facebook`, `apple`, `joypixels`, `tossface`, `whatsapp`, or `oneui`  
 
  - `%EMOJI_ID%` is the lower-case, hyphen-separated hexadecimal representation of the Emoji, as listed in the JSON table. `minimally-qualified` and `unqualified` status entries must use the target value of their `fully-qualified` counterpart  
 
