@@ -27,4 +27,4 @@
 	url = https://github.com/dmlls/whatsapp-emoji-linux.git
 [submodule "sources/oneui-emoji"]
 	path = sources/oneui-emoji
-	url = git@github.com:RealityRipple/oneui-emoji.git
+	url = https://github.com/RealityRipple/oneui-emoji.git
