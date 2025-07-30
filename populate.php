@@ -18,7 +18,9 @@
  foreach ($fonts as $font => $fontPath)
  {
   @mkdir($font);
-  if (file_exists('sources/'.$fontPath.'/emoji_aliases.txt'))
+  if (file_exists('sources/'.$fontPath.'/third_party/noto_emoji/emoji_aliases.txt'))
+   $redirs[$font] = fileReadAlias($fontPath.'/third_party/noto_emoji/');
+  else if (file_exists('sources/'.$fontPath.'/emoji_aliases.txt'))
    $redirs[$font] = fileReadAlias($fontPath);
  }
  copy('sources/twemoji/LICENSE', './LICENSE-TWEMOJI');

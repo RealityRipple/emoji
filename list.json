@@ -313,6 +313,32 @@
         "group": "Smileys & Emotion",
         "subgroup": "face-neutral-skeptical"
     },
+    "1f642-200d-2194-fe0f": {
+        "name": "head shaking horizontally",
+        "ver": "15.1",
+        "group": "Smileys & Emotion",
+        "subgroup": "face-neutral-skeptical",
+        "aliases": [
+            "1f642-200d-2194"
+        ]
+    },
+    "1f642-200d-2194": {
+        "target": "1f642-200d-2194-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f642-200d-2195-fe0f": {
+        "name": "head shaking vertically",
+        "ver": "15.1",
+        "group": "Smileys & Emotion",
+        "subgroup": "face-neutral-skeptical",
+        "aliases": [
+            "1f642-200d-2195"
+        ]
+    },
+    "1f642-200d-2195": {
+        "target": "1f642-200d-2195-fe0f",
+        "status": "minimally-qualified"
+    },
     "1f60c": {
         "name": "relieved face",
         "ver": "0.6",
@@ -12255,6 +12281,360 @@
         "target": "1f6b6-1f3ff-200d-2640-fe0f",
         "status": "minimally-qualified"
     },
+    "1f6b6-200d-27a1-fe0f": {
+        "name": "person walking facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-200d-27a1"
+        ]
+    },
+    "1f6b6-200d-27a1": {
+        "target": "1f6b6-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fb-200d-27a1-fe0f": {
+        "name": "person walking facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fb-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fb-200d-27a1": {
+        "target": "1f6b6-1f3fb-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fc-200d-27a1-fe0f": {
+        "name": "person walking facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fc-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fc-200d-27a1": {
+        "target": "1f6b6-1f3fc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fd-200d-27a1-fe0f": {
+        "name": "person walking facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fd-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fd-200d-27a1": {
+        "target": "1f6b6-1f3fd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fe-200d-27a1-fe0f": {
+        "name": "person walking facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fe-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fe-200d-27a1": {
+        "target": "1f6b6-1f3fe-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3ff-200d-27a1-fe0f": {
+        "name": "person walking facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3ff-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3ff-200d-27a1": {
+        "target": "1f6b6-1f3ff-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman walking facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-200d-2640-200d-27a1-fe0f",
+            "1f6b6-200d-2640-fe0f-200d-27a1",
+            "1f6b6-200d-2640-200d-27a1"
+        ]
+    },
+    "1f6b6-200d-2640-200d-27a1-fe0f": {
+        "target": "1f6b6-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-200d-2640-fe0f-200d-27a1": {
+        "target": "1f6b6-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-200d-2640-200d-27a1": {
+        "target": "1f6b6-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fb-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman walking facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fb-200d-2640-200d-27a1-fe0f",
+            "1f6b6-1f3fb-200d-2640-fe0f-200d-27a1",
+            "1f6b6-1f3fb-200d-2640-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fb-200d-2640-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3fb-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fb-200d-2640-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3fb-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fb-200d-2640-200d-27a1": {
+        "target": "1f6b6-1f3fb-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fc-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman walking facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fc-200d-2640-200d-27a1-fe0f",
+            "1f6b6-1f3fc-200d-2640-fe0f-200d-27a1",
+            "1f6b6-1f3fc-200d-2640-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fc-200d-2640-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3fc-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fc-200d-2640-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3fc-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fc-200d-2640-200d-27a1": {
+        "target": "1f6b6-1f3fc-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fd-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman walking facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fd-200d-2640-200d-27a1-fe0f",
+            "1f6b6-1f3fd-200d-2640-fe0f-200d-27a1",
+            "1f6b6-1f3fd-200d-2640-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fd-200d-2640-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3fd-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fd-200d-2640-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3fd-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fd-200d-2640-200d-27a1": {
+        "target": "1f6b6-1f3fd-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fe-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman walking facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fe-200d-2640-200d-27a1-fe0f",
+            "1f6b6-1f3fe-200d-2640-fe0f-200d-27a1",
+            "1f6b6-1f3fe-200d-2640-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fe-200d-2640-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fe-200d-2640-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fe-200d-2640-200d-27a1": {
+        "target": "1f6b6-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3ff-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman walking facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3ff-200d-2640-200d-27a1-fe0f",
+            "1f6b6-1f3ff-200d-2640-fe0f-200d-27a1",
+            "1f6b6-1f3ff-200d-2640-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3ff-200d-2640-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3ff-200d-2640-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3ff-200d-2640-200d-27a1": {
+        "target": "1f6b6-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man walking facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-200d-2642-200d-27a1-fe0f",
+            "1f6b6-200d-2642-fe0f-200d-27a1",
+            "1f6b6-200d-2642-200d-27a1"
+        ]
+    },
+    "1f6b6-200d-2642-200d-27a1-fe0f": {
+        "target": "1f6b6-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-200d-2642-fe0f-200d-27a1": {
+        "target": "1f6b6-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-200d-2642-200d-27a1": {
+        "target": "1f6b6-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fb-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man walking facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fb-200d-2642-200d-27a1-fe0f",
+            "1f6b6-1f3fb-200d-2642-fe0f-200d-27a1",
+            "1f6b6-1f3fb-200d-2642-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fb-200d-2642-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3fb-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fb-200d-2642-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3fb-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fb-200d-2642-200d-27a1": {
+        "target": "1f6b6-1f3fb-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fc-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man walking facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fc-200d-2642-200d-27a1-fe0f",
+            "1f6b6-1f3fc-200d-2642-fe0f-200d-27a1",
+            "1f6b6-1f3fc-200d-2642-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fc-200d-2642-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fc-200d-2642-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fc-200d-2642-200d-27a1": {
+        "target": "1f6b6-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fd-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man walking facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fd-200d-2642-200d-27a1-fe0f",
+            "1f6b6-1f3fd-200d-2642-fe0f-200d-27a1",
+            "1f6b6-1f3fd-200d-2642-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fd-200d-2642-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fd-200d-2642-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fd-200d-2642-200d-27a1": {
+        "target": "1f6b6-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fe-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man walking facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3fe-200d-2642-200d-27a1-fe0f",
+            "1f6b6-1f3fe-200d-2642-fe0f-200d-27a1",
+            "1f6b6-1f3fe-200d-2642-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3fe-200d-2642-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fe-200d-2642-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3fe-200d-2642-200d-27a1": {
+        "target": "1f6b6-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3ff-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man walking facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f6b6-1f3ff-200d-2642-200d-27a1-fe0f",
+            "1f6b6-1f3ff-200d-2642-fe0f-200d-27a1",
+            "1f6b6-1f3ff-200d-2642-200d-27a1"
+        ]
+    },
+    "1f6b6-1f3ff-200d-2642-200d-27a1-fe0f": {
+        "target": "1f6b6-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3ff-200d-2642-fe0f-200d-27a1": {
+        "target": "1f6b6-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f6b6-1f3ff-200d-2642-200d-27a1": {
+        "target": "1f6b6-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
     "1f9cd": {
         "name": "person standing",
         "ver": "12.0",
@@ -12639,6 +13019,360 @@
         "target": "1f9ce-1f3ff-200d-2640-fe0f",
         "status": "minimally-qualified"
     },
+    "1f9ce-200d-27a1-fe0f": {
+        "name": "person kneeling facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-200d-27a1"
+        ]
+    },
+    "1f9ce-200d-27a1": {
+        "target": "1f9ce-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fb-200d-27a1-fe0f": {
+        "name": "person kneeling facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fb-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fb-200d-27a1": {
+        "target": "1f9ce-1f3fb-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fc-200d-27a1-fe0f": {
+        "name": "person kneeling facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fc-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fc-200d-27a1": {
+        "target": "1f9ce-1f3fc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fd-200d-27a1-fe0f": {
+        "name": "person kneeling facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fd-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fd-200d-27a1": {
+        "target": "1f9ce-1f3fd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fe-200d-27a1-fe0f": {
+        "name": "person kneeling facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fe-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fe-200d-27a1": {
+        "target": "1f9ce-1f3fe-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3ff-200d-27a1-fe0f": {
+        "name": "person kneeling facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3ff-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3ff-200d-27a1": {
+        "target": "1f9ce-1f3ff-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman kneeling facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-200d-2640-200d-27a1-fe0f",
+            "1f9ce-200d-2640-fe0f-200d-27a1",
+            "1f9ce-200d-2640-200d-27a1"
+        ]
+    },
+    "1f9ce-200d-2640-200d-27a1-fe0f": {
+        "target": "1f9ce-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-200d-2640-fe0f-200d-27a1": {
+        "target": "1f9ce-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-200d-2640-200d-27a1": {
+        "target": "1f9ce-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fb-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman kneeling facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fb-200d-2640-200d-27a1-fe0f",
+            "1f9ce-1f3fb-200d-2640-fe0f-200d-27a1",
+            "1f9ce-1f3fb-200d-2640-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fb-200d-2640-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3fb-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fb-200d-2640-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3fb-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fb-200d-2640-200d-27a1": {
+        "target": "1f9ce-1f3fb-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fc-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman kneeling facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fc-200d-2640-200d-27a1-fe0f",
+            "1f9ce-1f3fc-200d-2640-fe0f-200d-27a1",
+            "1f9ce-1f3fc-200d-2640-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fc-200d-2640-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3fc-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fc-200d-2640-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3fc-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fc-200d-2640-200d-27a1": {
+        "target": "1f9ce-1f3fc-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fd-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman kneeling facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fd-200d-2640-200d-27a1-fe0f",
+            "1f9ce-1f3fd-200d-2640-fe0f-200d-27a1",
+            "1f9ce-1f3fd-200d-2640-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fd-200d-2640-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3fd-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fd-200d-2640-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3fd-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fd-200d-2640-200d-27a1": {
+        "target": "1f9ce-1f3fd-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fe-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman kneeling facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fe-200d-2640-200d-27a1-fe0f",
+            "1f9ce-1f3fe-200d-2640-fe0f-200d-27a1",
+            "1f9ce-1f3fe-200d-2640-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fe-200d-2640-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fe-200d-2640-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fe-200d-2640-200d-27a1": {
+        "target": "1f9ce-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3ff-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman kneeling facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3ff-200d-2640-200d-27a1-fe0f",
+            "1f9ce-1f3ff-200d-2640-fe0f-200d-27a1",
+            "1f9ce-1f3ff-200d-2640-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3ff-200d-2640-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3ff-200d-2640-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3ff-200d-2640-200d-27a1": {
+        "target": "1f9ce-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man kneeling facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-200d-2642-200d-27a1-fe0f",
+            "1f9ce-200d-2642-fe0f-200d-27a1",
+            "1f9ce-200d-2642-200d-27a1"
+        ]
+    },
+    "1f9ce-200d-2642-200d-27a1-fe0f": {
+        "target": "1f9ce-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-200d-2642-fe0f-200d-27a1": {
+        "target": "1f9ce-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-200d-2642-200d-27a1": {
+        "target": "1f9ce-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fb-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man kneeling facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fb-200d-2642-200d-27a1-fe0f",
+            "1f9ce-1f3fb-200d-2642-fe0f-200d-27a1",
+            "1f9ce-1f3fb-200d-2642-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fb-200d-2642-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3fb-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fb-200d-2642-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3fb-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fb-200d-2642-200d-27a1": {
+        "target": "1f9ce-1f3fb-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fc-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man kneeling facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fc-200d-2642-200d-27a1-fe0f",
+            "1f9ce-1f3fc-200d-2642-fe0f-200d-27a1",
+            "1f9ce-1f3fc-200d-2642-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fc-200d-2642-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fc-200d-2642-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fc-200d-2642-200d-27a1": {
+        "target": "1f9ce-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fd-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man kneeling facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fd-200d-2642-200d-27a1-fe0f",
+            "1f9ce-1f3fd-200d-2642-fe0f-200d-27a1",
+            "1f9ce-1f3fd-200d-2642-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fd-200d-2642-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fd-200d-2642-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fd-200d-2642-200d-27a1": {
+        "target": "1f9ce-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fe-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man kneeling facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3fe-200d-2642-200d-27a1-fe0f",
+            "1f9ce-1f3fe-200d-2642-fe0f-200d-27a1",
+            "1f9ce-1f3fe-200d-2642-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3fe-200d-2642-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fe-200d-2642-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3fe-200d-2642-200d-27a1": {
+        "target": "1f9ce-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3ff-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man kneeling facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9ce-1f3ff-200d-2642-200d-27a1-fe0f",
+            "1f9ce-1f3ff-200d-2642-fe0f-200d-27a1",
+            "1f9ce-1f3ff-200d-2642-200d-27a1"
+        ]
+    },
+    "1f9ce-1f3ff-200d-2642-200d-27a1-fe0f": {
+        "target": "1f9ce-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3ff-200d-2642-fe0f-200d-27a1": {
+        "target": "1f9ce-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9ce-1f3ff-200d-2642-200d-27a1": {
+        "target": "1f9ce-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
     "1f9d1-200d-1f9af": {
         "name": "person with white cane",
         "ver": "12.1",
@@ -12674,6 +13408,84 @@
         "ver": "12.1",
         "group": "People & Body",
         "subgroup": "person-activity"
+    },
+    "1f9d1-200d-1f9af-200d-27a1-fe0f": {
+        "name": "person with white cane facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f9d1-200d-1f9af-200d-27a1": {
+        "target": "1f9d1-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fb-200d-1f9af-200d-27a1-fe0f": {
+        "name": "person with white cane facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fb-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fb-200d-1f9af-200d-27a1": {
+        "target": "1f9d1-1f3fb-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fc-200d-1f9af-200d-27a1-fe0f": {
+        "name": "person with white cane facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fc-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fc-200d-1f9af-200d-27a1": {
+        "target": "1f9d1-1f3fc-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fd-200d-1f9af-200d-27a1-fe0f": {
+        "name": "person with white cane facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fd-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fd-200d-1f9af-200d-27a1": {
+        "target": "1f9d1-1f3fd-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fe-200d-1f9af-200d-27a1-fe0f": {
+        "name": "person with white cane facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fe-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fe-200d-1f9af-200d-27a1": {
+        "target": "1f9d1-1f3fe-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3ff-200d-1f9af-200d-27a1-fe0f": {
+        "name": "person with white cane facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3ff-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3ff-200d-1f9af-200d-27a1": {
+        "target": "1f9d1-1f3ff-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
     },
     "1f468-200d-1f9af": {
         "name": "man with white cane",
@@ -12711,6 +13523,84 @@
         "group": "People & Body",
         "subgroup": "person-activity"
     },
+    "1f468-200d-1f9af-200d-27a1-fe0f": {
+        "name": "man with white cane facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f468-200d-1f9af-200d-27a1": {
+        "target": "1f468-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fb-200d-1f9af-200d-27a1-fe0f": {
+        "name": "man with white cane facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fb-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f468-1f3fb-200d-1f9af-200d-27a1": {
+        "target": "1f468-1f3fb-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fc-200d-1f9af-200d-27a1-fe0f": {
+        "name": "man with white cane facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fc-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f468-1f3fc-200d-1f9af-200d-27a1": {
+        "target": "1f468-1f3fc-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fd-200d-1f9af-200d-27a1-fe0f": {
+        "name": "man with white cane facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fd-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f468-1f3fd-200d-1f9af-200d-27a1": {
+        "target": "1f468-1f3fd-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fe-200d-1f9af-200d-27a1-fe0f": {
+        "name": "man with white cane facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fe-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f468-1f3fe-200d-1f9af-200d-27a1": {
+        "target": "1f468-1f3fe-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3ff-200d-1f9af-200d-27a1-fe0f": {
+        "name": "man with white cane facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3ff-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f468-1f3ff-200d-1f9af-200d-27a1": {
+        "target": "1f468-1f3ff-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
     "1f469-200d-1f9af": {
         "name": "woman with white cane",
         "ver": "12.0",
@@ -12746,6 +13636,84 @@
         "ver": "12.0",
         "group": "People & Body",
         "subgroup": "person-activity"
+    },
+    "1f469-200d-1f9af-200d-27a1-fe0f": {
+        "name": "woman with white cane facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f469-200d-1f9af-200d-27a1": {
+        "target": "1f469-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fb-200d-1f9af-200d-27a1-fe0f": {
+        "name": "woman with white cane facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fb-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f469-1f3fb-200d-1f9af-200d-27a1": {
+        "target": "1f469-1f3fb-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fc-200d-1f9af-200d-27a1-fe0f": {
+        "name": "woman with white cane facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fc-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f469-1f3fc-200d-1f9af-200d-27a1": {
+        "target": "1f469-1f3fc-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fd-200d-1f9af-200d-27a1-fe0f": {
+        "name": "woman with white cane facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fd-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f469-1f3fd-200d-1f9af-200d-27a1": {
+        "target": "1f469-1f3fd-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fe-200d-1f9af-200d-27a1-fe0f": {
+        "name": "woman with white cane facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fe-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f469-1f3fe-200d-1f9af-200d-27a1": {
+        "target": "1f469-1f3fe-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3ff-200d-1f9af-200d-27a1-fe0f": {
+        "name": "woman with white cane facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3ff-200d-1f9af-200d-27a1"
+        ]
+    },
+    "1f469-1f3ff-200d-1f9af-200d-27a1": {
+        "target": "1f469-1f3ff-200d-1f9af-200d-27a1-fe0f",
+        "status": "minimally-qualified"
     },
     "1f9d1-200d-1f9bc": {
         "name": "person in motorized wheelchair",
@@ -12783,6 +13751,84 @@
         "group": "People & Body",
         "subgroup": "person-activity"
     },
+    "1f9d1-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "person in motorized wheelchair facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f9d1-200d-1f9bc-200d-27a1": {
+        "target": "1f9d1-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fb-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "person in motorized wheelchair facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fb-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fb-200d-1f9bc-200d-27a1": {
+        "target": "1f9d1-1f3fb-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fc-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "person in motorized wheelchair facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fc-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fc-200d-1f9bc-200d-27a1": {
+        "target": "1f9d1-1f3fc-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fd-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "person in motorized wheelchair facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fd-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fd-200d-1f9bc-200d-27a1": {
+        "target": "1f9d1-1f3fd-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fe-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "person in motorized wheelchair facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fe-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fe-200d-1f9bc-200d-27a1": {
+        "target": "1f9d1-1f3fe-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3ff-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "person in motorized wheelchair facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3ff-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3ff-200d-1f9bc-200d-27a1": {
+        "target": "1f9d1-1f3ff-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
     "1f468-200d-1f9bc": {
         "name": "man in motorized wheelchair",
         "ver": "12.0",
@@ -12818,6 +13864,84 @@
         "ver": "12.0",
         "group": "People & Body",
         "subgroup": "person-activity"
+    },
+    "1f468-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "man in motorized wheelchair facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f468-200d-1f9bc-200d-27a1": {
+        "target": "1f468-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fb-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "man in motorized wheelchair facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fb-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f468-1f3fb-200d-1f9bc-200d-27a1": {
+        "target": "1f468-1f3fb-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fc-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "man in motorized wheelchair facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fc-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f468-1f3fc-200d-1f9bc-200d-27a1": {
+        "target": "1f468-1f3fc-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fd-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "man in motorized wheelchair facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fd-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f468-1f3fd-200d-1f9bc-200d-27a1": {
+        "target": "1f468-1f3fd-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fe-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "man in motorized wheelchair facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fe-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f468-1f3fe-200d-1f9bc-200d-27a1": {
+        "target": "1f468-1f3fe-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3ff-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "man in motorized wheelchair facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3ff-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f468-1f3ff-200d-1f9bc-200d-27a1": {
+        "target": "1f468-1f3ff-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
     },
     "1f469-200d-1f9bc": {
         "name": "woman in motorized wheelchair",
@@ -12855,6 +13979,84 @@
         "group": "People & Body",
         "subgroup": "person-activity"
     },
+    "1f469-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "woman in motorized wheelchair facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f469-200d-1f9bc-200d-27a1": {
+        "target": "1f469-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fb-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "woman in motorized wheelchair facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fb-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f469-1f3fb-200d-1f9bc-200d-27a1": {
+        "target": "1f469-1f3fb-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fc-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "woman in motorized wheelchair facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fc-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f469-1f3fc-200d-1f9bc-200d-27a1": {
+        "target": "1f469-1f3fc-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fd-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "woman in motorized wheelchair facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fd-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f469-1f3fd-200d-1f9bc-200d-27a1": {
+        "target": "1f469-1f3fd-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fe-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "woman in motorized wheelchair facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fe-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f469-1f3fe-200d-1f9bc-200d-27a1": {
+        "target": "1f469-1f3fe-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3ff-200d-1f9bc-200d-27a1-fe0f": {
+        "name": "woman in motorized wheelchair facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3ff-200d-1f9bc-200d-27a1"
+        ]
+    },
+    "1f469-1f3ff-200d-1f9bc-200d-27a1": {
+        "target": "1f469-1f3ff-200d-1f9bc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
     "1f9d1-200d-1f9bd": {
         "name": "person in manual wheelchair",
         "ver": "12.1",
@@ -12890,6 +14092,84 @@
         "ver": "12.1",
         "group": "People & Body",
         "subgroup": "person-activity"
+    },
+    "1f9d1-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "person in manual wheelchair facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f9d1-200d-1f9bd-200d-27a1": {
+        "target": "1f9d1-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fb-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "person in manual wheelchair facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fb-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fb-200d-1f9bd-200d-27a1": {
+        "target": "1f9d1-1f3fb-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fc-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "person in manual wheelchair facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fc-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fc-200d-1f9bd-200d-27a1": {
+        "target": "1f9d1-1f3fc-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fd-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "person in manual wheelchair facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fd-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fd-200d-1f9bd-200d-27a1": {
+        "target": "1f9d1-1f3fd-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3fe-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "person in manual wheelchair facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3fe-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3fe-200d-1f9bd-200d-27a1": {
+        "target": "1f9d1-1f3fe-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f9d1-1f3ff-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "person in manual wheelchair facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f9d1-1f3ff-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f9d1-1f3ff-200d-1f9bd-200d-27a1": {
+        "target": "1f9d1-1f3ff-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
     },
     "1f468-200d-1f9bd": {
         "name": "man in manual wheelchair",
@@ -12927,6 +14207,84 @@
         "group": "People & Body",
         "subgroup": "person-activity"
     },
+    "1f468-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "man in manual wheelchair facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f468-200d-1f9bd-200d-27a1": {
+        "target": "1f468-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fb-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "man in manual wheelchair facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fb-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f468-1f3fb-200d-1f9bd-200d-27a1": {
+        "target": "1f468-1f3fb-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fc-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "man in manual wheelchair facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fc-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f468-1f3fc-200d-1f9bd-200d-27a1": {
+        "target": "1f468-1f3fc-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fd-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "man in manual wheelchair facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fd-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f468-1f3fd-200d-1f9bd-200d-27a1": {
+        "target": "1f468-1f3fd-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3fe-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "man in manual wheelchair facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3fe-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f468-1f3fe-200d-1f9bd-200d-27a1": {
+        "target": "1f468-1f3fe-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f468-1f3ff-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "man in manual wheelchair facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f468-1f3ff-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f468-1f3ff-200d-1f9bd-200d-27a1": {
+        "target": "1f468-1f3ff-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
     "1f469-200d-1f9bd": {
         "name": "woman in manual wheelchair",
         "ver": "12.0",
@@ -12962,6 +14320,84 @@
         "ver": "12.0",
         "group": "People & Body",
         "subgroup": "person-activity"
+    },
+    "1f469-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "woman in manual wheelchair facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f469-200d-1f9bd-200d-27a1": {
+        "target": "1f469-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fb-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "woman in manual wheelchair facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fb-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f469-1f3fb-200d-1f9bd-200d-27a1": {
+        "target": "1f469-1f3fb-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fc-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "woman in manual wheelchair facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fc-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f469-1f3fc-200d-1f9bd-200d-27a1": {
+        "target": "1f469-1f3fc-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fd-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "woman in manual wheelchair facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fd-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f469-1f3fd-200d-1f9bd-200d-27a1": {
+        "target": "1f469-1f3fd-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3fe-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "woman in manual wheelchair facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3fe-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f469-1f3fe-200d-1f9bd-200d-27a1": {
+        "target": "1f469-1f3fe-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f469-1f3ff-200d-1f9bd-200d-27a1-fe0f": {
+        "name": "woman in manual wheelchair facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f469-1f3ff-200d-1f9bd-200d-27a1"
+        ]
+    },
+    "1f469-1f3ff-200d-1f9bd-200d-27a1": {
+        "target": "1f469-1f3ff-200d-1f9bd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
     },
     "1f3c3": {
         "name": "person running",
@@ -13153,6 +14589,360 @@
     },
     "1f3c3-1f3ff-200d-2640": {
         "target": "1f3c3-1f3ff-200d-2640-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-200d-27a1-fe0f": {
+        "name": "person running facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-200d-27a1"
+        ]
+    },
+    "1f3c3-200d-27a1": {
+        "target": "1f3c3-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fb-200d-27a1-fe0f": {
+        "name": "person running facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fb-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fb-200d-27a1": {
+        "target": "1f3c3-1f3fb-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fc-200d-27a1-fe0f": {
+        "name": "person running facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fc-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fc-200d-27a1": {
+        "target": "1f3c3-1f3fc-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fd-200d-27a1-fe0f": {
+        "name": "person running facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fd-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fd-200d-27a1": {
+        "target": "1f3c3-1f3fd-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fe-200d-27a1-fe0f": {
+        "name": "person running facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fe-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fe-200d-27a1": {
+        "target": "1f3c3-1f3fe-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3ff-200d-27a1-fe0f": {
+        "name": "person running facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3ff-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3ff-200d-27a1": {
+        "target": "1f3c3-1f3ff-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman running facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-200d-2640-200d-27a1-fe0f",
+            "1f3c3-200d-2640-fe0f-200d-27a1",
+            "1f3c3-200d-2640-200d-27a1"
+        ]
+    },
+    "1f3c3-200d-2640-200d-27a1-fe0f": {
+        "target": "1f3c3-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-200d-2640-fe0f-200d-27a1": {
+        "target": "1f3c3-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-200d-2640-200d-27a1": {
+        "target": "1f3c3-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fb-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman running facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fb-200d-2640-200d-27a1-fe0f",
+            "1f3c3-1f3fb-200d-2640-fe0f-200d-27a1",
+            "1f3c3-1f3fb-200d-2640-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fb-200d-2640-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3fb-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fb-200d-2640-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3fb-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fb-200d-2640-200d-27a1": {
+        "target": "1f3c3-1f3fb-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fc-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman running facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fc-200d-2640-200d-27a1-fe0f",
+            "1f3c3-1f3fc-200d-2640-fe0f-200d-27a1",
+            "1f3c3-1f3fc-200d-2640-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fc-200d-2640-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3fc-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fc-200d-2640-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3fc-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fc-200d-2640-200d-27a1": {
+        "target": "1f3c3-1f3fc-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fd-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman running facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fd-200d-2640-200d-27a1-fe0f",
+            "1f3c3-1f3fd-200d-2640-fe0f-200d-27a1",
+            "1f3c3-1f3fd-200d-2640-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fd-200d-2640-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3fd-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fd-200d-2640-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3fd-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fd-200d-2640-200d-27a1": {
+        "target": "1f3c3-1f3fd-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fe-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman running facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fe-200d-2640-200d-27a1-fe0f",
+            "1f3c3-1f3fe-200d-2640-fe0f-200d-27a1",
+            "1f3c3-1f3fe-200d-2640-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fe-200d-2640-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fe-200d-2640-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fe-200d-2640-200d-27a1": {
+        "target": "1f3c3-1f3fe-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3ff-200d-2640-fe0f-200d-27a1-fe0f": {
+        "name": "woman running facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3ff-200d-2640-200d-27a1-fe0f",
+            "1f3c3-1f3ff-200d-2640-fe0f-200d-27a1",
+            "1f3c3-1f3ff-200d-2640-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3ff-200d-2640-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3ff-200d-2640-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3ff-200d-2640-200d-27a1": {
+        "target": "1f3c3-1f3ff-200d-2640-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man running facing right",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-200d-2642-200d-27a1-fe0f",
+            "1f3c3-200d-2642-fe0f-200d-27a1",
+            "1f3c3-200d-2642-200d-27a1"
+        ]
+    },
+    "1f3c3-200d-2642-200d-27a1-fe0f": {
+        "target": "1f3c3-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-200d-2642-fe0f-200d-27a1": {
+        "target": "1f3c3-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-200d-2642-200d-27a1": {
+        "target": "1f3c3-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fb-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man running facing right: light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fb-200d-2642-200d-27a1-fe0f",
+            "1f3c3-1f3fb-200d-2642-fe0f-200d-27a1",
+            "1f3c3-1f3fb-200d-2642-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fb-200d-2642-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3fb-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fb-200d-2642-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3fb-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fb-200d-2642-200d-27a1": {
+        "target": "1f3c3-1f3fb-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fc-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man running facing right: medium-light skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fc-200d-2642-200d-27a1-fe0f",
+            "1f3c3-1f3fc-200d-2642-fe0f-200d-27a1",
+            "1f3c3-1f3fc-200d-2642-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fc-200d-2642-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fc-200d-2642-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fc-200d-2642-200d-27a1": {
+        "target": "1f3c3-1f3fc-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fd-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man running facing right: medium skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fd-200d-2642-200d-27a1-fe0f",
+            "1f3c3-1f3fd-200d-2642-fe0f-200d-27a1",
+            "1f3c3-1f3fd-200d-2642-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fd-200d-2642-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fd-200d-2642-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fd-200d-2642-200d-27a1": {
+        "target": "1f3c3-1f3fd-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fe-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man running facing right: medium-dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3fe-200d-2642-200d-27a1-fe0f",
+            "1f3c3-1f3fe-200d-2642-fe0f-200d-27a1",
+            "1f3c3-1f3fe-200d-2642-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3fe-200d-2642-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fe-200d-2642-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3fe-200d-2642-200d-27a1": {
+        "target": "1f3c3-1f3fe-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3ff-200d-2642-fe0f-200d-27a1-fe0f": {
+        "name": "man running facing right: dark skin tone",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-activity",
+        "aliases": [
+            "1f3c3-1f3ff-200d-2642-200d-27a1-fe0f",
+            "1f3c3-1f3ff-200d-2642-fe0f-200d-27a1",
+            "1f3c3-1f3ff-200d-2642-200d-27a1"
+        ]
+    },
+    "1f3c3-1f3ff-200d-2642-200d-27a1-fe0f": {
+        "target": "1f3c3-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3ff-200d-2642-fe0f-200d-27a1": {
+        "target": "1f3c3-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
+        "status": "minimally-qualified"
+    },
+    "1f3c3-1f3ff-200d-2642-200d-27a1": {
+        "target": "1f3c3-1f3ff-200d-2642-fe0f-200d-27a1-fe0f",
         "status": "minimally-qualified"
     },
     "1f483": {
@@ -19889,6 +21679,30 @@
         "group": "People & Body",
         "subgroup": "person-symbol"
     },
+    "1f9d1-200d-1f9d1-200d-1f9d2": {
+        "name": "family: adult, adult, child",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-symbol"
+    },
+    "1f9d1-200d-1f9d1-200d-1f9d2-200d-1f9d2": {
+        "name": "family: adult, adult, child, child",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-symbol"
+    },
+    "1f9d1-200d-1f9d2": {
+        "name": "family: adult, child",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-symbol"
+    },
+    "1f9d1-200d-1f9d2-200d-1f9d2": {
+        "name": "family: adult, child, child",
+        "ver": "15.1",
+        "group": "People & Body",
+        "subgroup": "person-symbol"
+    },
     "1f463": {
         "name": "footprints",
         "ver": "0.6",
@@ -20438,6 +22252,12 @@
         "group": "Animals & Nature",
         "subgroup": "animal-bird"
     },
+    "1f426-200d-1f525": {
+        "name": "phoenix",
+        "ver": "15.1",
+        "group": "Animals & Nature",
+        "subgroup": "animal-bird"
+    },
     "1f438": {
         "name": "frog",
         "ver": "0.6",
@@ -20886,6 +22706,12 @@
         "group": "Food & Drink",
         "subgroup": "food-fruit"
     },
+    "1f34b-200d-1f7e9": {
+        "name": "lime",
+        "ver": "15.1",
+        "group": "Food & Drink",
+        "subgroup": "food-fruit"
+    },
     "1f34c": {
         "name": "banana",
         "ver": "0.6",
@@ -21076,6 +22902,12 @@
     "1fadb": {
         "name": "pea pod",
         "ver": "15.0",
+        "group": "Food & Drink",
+        "subgroup": "food-vegetable"
+    },
+    "1f344-200d-1f7eb": {
+        "name": "brown mushroom",
+        "ver": "15.1",
         "group": "Food & Drink",
         "subgroup": "food-vegetable"
     },
@@ -25454,6 +27286,19 @@
         "ver": "0.6",
         "group": "Objects",
         "subgroup": "tool"
+    },
+    "26d3-fe0f-200d-1f4a5": {
+        "name": "broken chain",
+        "ver": "15.1",
+        "group": "Objects",
+        "subgroup": "tool",
+        "aliases": [
+            "26d3-200d-1f4a5"
+        ]
+    },
+    "26d3-200d-1f4a5": {
+        "target": "26d3-fe0f-200d-1f4a5",
+        "status": "unqualified"
     },
     "26d3-fe0f": {
         "name": "chains",
